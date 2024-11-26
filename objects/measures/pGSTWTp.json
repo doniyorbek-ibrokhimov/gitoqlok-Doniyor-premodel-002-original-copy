@@ -1,0 +1,28 @@
+{
+  "qInfo": {
+    "qId": "pGSTWTp",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Кол-во ГП",
+    "qDef": "[Факт_продаж_ГП]*$(='UMREN_UMREZ_'&'$(vАЕИ)'))",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "# ##0,00",
+      "qDec": ",",
+      "qThou": " "
+    },
+    "isCustomFormatted": false,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Кол-во ГП",
+    "description": "",
+    "tags": []
+  }
+}

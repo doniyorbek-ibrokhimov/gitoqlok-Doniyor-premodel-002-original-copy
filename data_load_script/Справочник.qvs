@@ -1,0 +1,17 @@
+///$tab Справочник
+[АЕИ_Справочник]:
+LOAD
+    SAP_code,
+    UMREN_UMREZ,
+    АЕИ_0,
+    АЕИ_1,
+    АЕИ_2,
+    АЕИ_3,
+    АЕИ_4,
+    UMREN_UMREZ_0,
+    UMREN_UMREZ_1,
+    UMREN_UMREZ_2,
+    UMREN_UMREZ_3,
+    UMREN_UMREZ_4
+FROM [lib://Data/!QVD DATA/APP_006/PreModel/АЕИ_Справочник.qvd](qvd)
+;

@@ -1,0 +1,125 @@
+///$tab MAP
+MAPPING_ZZ_DDS_ITEM:
+MAPPING LOAD
+    BUKRS & '|' & KUNNR as BUKRS_KUNNR,
+    ZZ_DDS_ITEM
+FROM [lib://Data/!QVD DATA/QVD/SAP/KNB1.qvd](qvd)
+;
+
+// MAPPING_ITEM:
+// MAPPING LOAD
+//     ZZ_DDS_ITEM,
+//     ITEM
+// FROM [lib://Data/!QVD DATA/QVD/SAP/FIRUC_CF_ITEM.qvd](qvd)
+// ;
+
+// маппинг для наименования клиента
+MAPPING_NAME:
+MAPPING LOAD
+    KUNNR,
+    NAME1 & NAME2 as NAME
+//     NAME1 & NAME2 & NAME3 as NAME
+FROM [lib://Data/!QVD DATA/QVD/SAP/KNA1.qvd](qvd)
+;
+
+// маппинг для наименования контракта
+MAPPING_EXTCNUM:
+Mapping LOAD
+	INTCNUM as ZUONR,
+    EXTCNUM
+FROM [lib://Data/!QVD DATA/QVD/SAP/J_3RFCNT.qvd](qvd)
+;
+
+MAPPING_VTWEG:
+MAPPING LOAD
+	VBELN as AWREF,
+	VTWEG
+FROM [lib://Data/!QVD DATA/QVD/SAP/VBRK.qvd](qvd)
+;
+
+MAPPING_KONDA:
+MAPPING LOAD
+	VBELN as AWREF,
+	KONDA
+FROM [lib://Data/!QVD DATA/QVD/SAP/VBRK.qvd](qvd)
+;
+
+MAPPING_ADRNR:
+MAPPING LOAD
+	VBELN as AWREF,
+	ADRNR
+FROM [lib://Data/!QVD DATA/QVD/SAP/VBPA.qvd](qvd)
+WHERE Exists(PARVW)
+;
+
+MAPPING_COUNTRY:
+MAPPING LOAD
+	ADDRNUMBER as ADRNR,
+	COUNTRY
+FROM [lib://Data/!QVD DATA/QVD/SAP/ADRC.qvd](qvd)
+;
+
+MAPPING_REGION:
+MAPPING LOAD
+	ADDRNUMBER as ADRNR,
+	REGION
+FROM [lib://Data/!QVD DATA/QVD/SAP/ADRC.qvd](qvd)
+;
+
+MAPPING_BP_EXPORT:
+MAPPING LOAD
+    Text(KUNNR) as KUNNR,
+    Группировка&'|'&KUNNR
+FROM [lib://Data/!QVD DATA/QVD/GD/BP_SAP_EXPORT.qvd](qvd)
+;
+
+MAPPING_BP_LOCAL:
+MAPPING LOAD
+    Text(KUNNR) as KUNNR,
+    Группировка as [Группировка местные]
+FROM [lib://Data/!QVD DATA/QVD/GD/BP_SAP_LOCAL.qvd](qvd)
+;
+
+MAPPING_BP_OTHERS:
+MAPPING LOAD
+    Text(KUNNR) as KUNNR,
+    Группировка as [Группировка другие]
+FROM [lib://Data/!QVD DATA/QVD/GD/BP_SAP_OTHERS.qvd](qvd)
+;
+
+
+MAPPING_VBAK_BSTNK:
+MAPPING LOAD
+	KUNNR,
+	BSTNK
+FROM [lib://Data/!QVD DATA/QVD/SAP/VBAK.qvd](qvd)
+;
+
+
+[Завод_Справочник]:
+MAPPING LOAD
+    Text(WERKS) as МВП,
+    NAME1 as "Название МВП"
+     
+FROM [lib://Data/!QVD DATA/QVD/SAP/T001W.qvd](qvd);
+
+
+MAPPING_COUNTRY2:
+MAPPING LOAD
+    KUNNR,
+    LAND1 as COUNTRY2
+FROM [lib://Data/!QVD DATA/QVD/SAP/KNA1.qvd](qvd)
+;
+[Страны_Справочник]:
+MAPPING LOAD
+  LAND1 as COUNTRY2,
+  LANDX50
+FROM [lib://Data/!QVD DATA/QVD/SAP/T005T.qvd](qvd);
+
+
+
+Data_P006:
+MAPPING LOAD
+  KUNRG as KUNNR,
+  Факт_продаж_ГП
+FROM [lib://Data/!QVD DATA/APP_006/PreModel/Data.qvd](qvd);

@@ -1,0 +1,29 @@
+{
+  "qInfo": {
+    "qId": "MwPq",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Продажи Экспорт",
+    "qDef": "{$<[Канал_продажи]={'Экспорт'}>}\r\n\n[Продажи]",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "# ##0,00",
+      "qDec": ",",
+      "qThou": " "
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Продажи Экспорт",
+    "description": "",
+    "tags": []
+  }
+}

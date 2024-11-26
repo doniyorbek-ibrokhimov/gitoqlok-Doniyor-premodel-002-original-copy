@@ -1,0 +1,29 @@
+{
+  "qInfo": {
+    "qId": "c57d575a-0835-4b1e-b97f-9753f0fdb8e3",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Продажи (1)",
+    "qDef": "Sum({<[AUGDT]={\">$(=date(round(num(MonthEnd(date(min([Месяц-Год-Num])))))))\"},key={'Принятый Инвойс'}>}$(='Сумма_'&'$(vCurrency)'))\r\n+ Sum({<[AUGDT]={\"<=$(=date(round(num(MonthEnd(date(min([Месяц-Год-Num])))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1},key={'Принятый Инвойс'}>}$(='Сумма_'&'$(vCurrency)'))\n\n\n\n\n/*\nSum({<[AUGDT]={\">$(=date(round(num(MonthEnd(date(min([Месяц-Год-Num])))))))\"},key={'Принятый Инвойс'}>}$(='Сумма_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=date(round(num(MonthEnd(date(min([Месяц-Год-Num])))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1},key={'Принятый Инвойс'}>}$(='Сумма_'&'$(vCurrency)'))\n\n",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "# ##0,00",
+      "qDec": ",",
+      "qThou": " "
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Продажи (1)",
+    "description": "",
+    "tags": []
+  }
+}

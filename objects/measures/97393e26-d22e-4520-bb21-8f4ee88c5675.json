@@ -1,0 +1,24 @@
+{
+  "qInfo": {
+    "qId": "97393e26-d22e-4520-bb21-8f4ee88c5675",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Сортировка местный",
+    "qDef": "Pick(Match(vSortBy, 1, 2, 3, 4, 5, 6, 7, 8),\r\n\t[Задолженность на начало периода местный],\n    [Продажи местный],\n    [Возврат местный],\n    [Оплата местный]*-1,\n    [Корректировка местный],\n    [Переоценка местный],\n    [Задолженность на конец периода местный],\n    0\n)",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Сортировка местный",
+    "description": "",
+    "tags": []
+  }
+}

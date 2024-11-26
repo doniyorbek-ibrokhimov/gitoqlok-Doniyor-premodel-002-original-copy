@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "49e82975-c120-460c-b72f-c2c0b453e7f3",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "vRevaluation",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "Переоценка",
+  "qIsScriptCreated": true
+}

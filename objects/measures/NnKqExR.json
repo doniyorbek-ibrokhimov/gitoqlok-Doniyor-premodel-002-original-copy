@@ -1,0 +1,29 @@
+{
+  "qInfo": {
+    "qId": "NnKqExR",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Оплата Экспорт",
+    "qDef": "{$<[Канал_продажи]={'Экспорт'}>}\r\n[Оплата]\n\n\n\n\n\n/*{<[экспорт клиенты]={'Экспорт'}>}\n\nSum(if([Дата]<'01.09.2023', [Оплата_итого], \n\n{<[AUGDT]={\">$(=date(round(num(MonthEnd(date(min([Месяц-Год-Num])))))))\"},key={'Оплата'}>}$(='Сумма_'&'$(vCurrency)')\n+ {<[AUGDT]={\"<=$(=date(round(num(MonthEnd(date(min([Месяц-Год-Num])))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1},key={'Оплата'}>}$(='Сумма_'&'$(vCurrency)')\n))\n\n\n\n\n\n/*\nsum({<Дата = {\"<'01.09.2023'\"} >}\n\n[Оплата_итого]) +\n\nSum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Оплата_'&'$(vCurrency)'))*-1\n+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Оплата_'&'$(vCurrency)'))*-1\n*/\n\n\n",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "# ##0,00",
+      "qDec": ",",
+      "qThou": " "
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Оплата Экспорт",
+    "description": "",
+    "tags": []
+  }
+}

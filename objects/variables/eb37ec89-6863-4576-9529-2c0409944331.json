@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "eb37ec89-6863-4576-9529-2c0409944331",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "CountFormat2",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "# ##0;-# ##0",
+  "qIsScriptCreated": true
+}

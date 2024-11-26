@@ -1,0 +1,500 @@
+///$tab Main
+$(Include=[lib://Data/Script/SA.qvs]);
+$(Include=[lib://Data/Script/Format.qvs]);
+set HidePrefix='_';
+
+
+[KURS_DIFF]:
+Mapping Load
+	Distinct RBUKRS&BELNR&GJAHR,
+    1
+From [lib://Data/!QVD DATA/QVD/SAP/ACDOCA.qvd](qvd)
+Where Match(Left(RACCT, 5), '63003','73003');
+///$tab Variable
+Set vSortBy = 7;
+Set vCurrency = 'UZS';
+Set vRevaluation = 'Переоценка';
+Set vConstructor = WildMatch('|'&Concat(_Конструктор_Num,'|')&'|','*|$1|*')=1;
+Set vConstructor_Measures = WildMatch('|'&Concat(_Конструктор_mea_Num,'|')&'|','*|$1|*')=1;
+// Set vConstructor_Measures = WildMatch('|'&Concat(_Конструктор_Мер_Num,'|')&'|','*|$1|*')=1;
+Set vАЕИ = 1;
+
+Set HidePrefix = '_';
+
+
+Let vThisYear = Year(Today());
+Let vThisMonth = Month(Today());
+Let vPrevMonth = Month(AddMonths(Today(),-1));
+///$tab Virt Table
+Конструктор_Измерений:
+Load
+Dual(_Конструктор,Порядок) as _Конструктор,
+Порядок as _Конструктор_Num
+;
+Load*inline
+
+// [_Конструктор,Порядок
+// 	Группа групп,1
+// 	Группа материалов,2
+//  	Канал закупа,3
+//  	Поставщик,4
+//  	Контракт,5
+//  	Валюта,6
+// ]
+[_Конструктор,Порядок
+	Страна,1
+  	Канал продажи,3
+ 	Группировка,4
+ 	Клиент,5
+    Ссылка клиента, 5.1
+ 	Контракт,6
+ 	Вид документа,7
+ 	Валюта,8
+    МВП, 9
+    Дебитор, 10
+    Документ, 11
+    Дата проводки, 12
+    Код документа, 13
+    Канал, 14
+    
+]
+;
+
+// Конструктор_Измерений:
+// Load
+// Dual(_Конструктор,Порядок) as _Конструктор,
+// Порядок as _Конструктор_Num
+// ;
+// Load*inline
+
+// [_Конструктор,Порядок
+//     Страна,1
+//     Покупатели,2
+//     Присвоение,3
+//     Код покупателя,4
+//    	Канал продажи,5
+//  	Группировка,6
+//     Контракт,7
+// ]
+// ;
+
+Конструктор_Измерений4:
+Load
+Dual(_Конструктор4,Порядок) as _Конструктор4,
+Порядок as _Конструктор_Num
+;
+Load*inline
+
+[_Конструктор4,Порядок
+    Страна,1
+    Код покупателя,2
+    Присвоение,3
+    Контракт,4
+    Поставщик,5
+ 	Группировка,6
+    Канал продажи,7
+]
+;
+
+
+Конструктор_Измерений1:
+Load
+Dual(_Конструктор1,Порядок) as _Конструктор1,
+Порядок as _Конструктор_Num
+;
+Load*inline
+
+[_Конструктор1,Порядок
+    Страна,1
+    Покупатели,2
+    Код покупателя,3
+   	Канал продажи,4
+ 	Группировка,5
+]
+;
+
+Конструктор_Измерений2:
+Load
+Dual(_Конструктор2,Порядок) as _Конструктор2,
+Порядок as _Конструктор_Num
+;
+Load*inline
+
+[_Конструктор2,Порядок
+    Страна,1
+    Канал продажи,2
+    Группировка,3
+    Клиент,4
+    Контракт,5
+    Вид документа,6 
+]
+;
+
+Конструктор_Измерений3:
+Load
+Dual(_Конструктор3,Порядок) as _Конструктор3,
+Порядок as _Конструктор_mea_Num
+;
+Load*inline
+
+[_Конструктор3,Порядок
+    Задолженность на начало периода,1
+    Продажи,2
+    Возврат,3
+    Оплата,4
+    Корректировка,5
+    Переоценка,6
+    Задолженность на конец периода,7
+  
+]
+;
+///$tab OPTIMIZING TABLES
+INCLUDE:
+NOCONCATENATE LOAD * INLINE [
+	RLDNR, PARVW, AWREF_REV
+	'0L', 'AG', ' '
+];
+
+NOT_INCLUDE:
+NOCONCATENATE LOAD * INLINE [
+	KUNNR
+	' '
+];
+
+INCLUDE_NOT_INCLUDE:
+NOCONCATENATE LOAD
+	KUNNR
+FROM [lib://Data/!QVD DATA/QVD/SAP/ACDOCA.qvd](qvd)
+WHERE NOT Exists(KUNNR)
+;
+
+DROP TABLE NOT_INCLUDE;
+
+///$tab MAP
+MAPPING_ZZ_DDS_ITEM:
+MAPPING LOAD
+    BUKRS & '|' & KUNNR as BUKRS_KUNNR,
+    ZZ_DDS_ITEM
+FROM [lib://Data/!QVD DATA/QVD/SAP/KNB1.qvd](qvd)
+;
+
+// MAPPING_ITEM:
+// MAPPING LOAD
+//     ZZ_DDS_ITEM,
+//     ITEM
+// FROM [lib://Data/!QVD DATA/QVD/SAP/FIRUC_CF_ITEM.qvd](qvd)
+// ;
+
+// маппинг для наименования клиента
+MAPPING_NAME:
+MAPPING LOAD
+    KUNNR,
+    NAME1 & NAME2 as NAME
+//     NAME1 & NAME2 & NAME3 as NAME
+FROM [lib://Data/!QVD DATA/QVD/SAP/KNA1.qvd](qvd)
+;
+
+// маппинг для наименования контракта
+MAPPING_EXTCNUM:
+Mapping LOAD
+	INTCNUM as ZUONR,
+    EXTCNUM
+FROM [lib://Data/!QVD DATA/QVD/SAP/J_3RFCNT.qvd](qvd)
+;
+
+MAPPING_VTWEG:
+MAPPING LOAD
+	VBELN as AWREF,
+	VTWEG
+FROM [lib://Data/!QVD DATA/QVD/SAP/VBRK.qvd](qvd)
+;
+
+MAPPING_KONDA:
+MAPPING LOAD
+	VBELN as AWREF,
+	KONDA
+FROM [lib://Data/!QVD DATA/QVD/SAP/VBRK.qvd](qvd)
+;
+
+MAPPING_ADRNR:
+MAPPING LOAD
+	VBELN as AWREF,
+	ADRNR
+FROM [lib://Data/!QVD DATA/QVD/SAP/VBPA.qvd](qvd)
+WHERE Exists(PARVW)
+;
+
+MAPPING_COUNTRY:
+MAPPING LOAD
+	ADDRNUMBER as ADRNR,
+	COUNTRY
+FROM [lib://Data/!QVD DATA/QVD/SAP/ADRC.qvd](qvd)
+;
+
+MAPPING_REGION:
+MAPPING LOAD
+	ADDRNUMBER as ADRNR,
+	REGION
+FROM [lib://Data/!QVD DATA/QVD/SAP/ADRC.qvd](qvd)
+;
+
+MAPPING_BP_EXPORT:
+MAPPING LOAD
+    Text(KUNNR) as KUNNR,
+    Группировка&'|'&KUNNR
+FROM [lib://Data/!QVD DATA/QVD/GD/BP_SAP_EXPORT.qvd](qvd)
+;
+
+MAPPING_BP_LOCAL:
+MAPPING LOAD
+    Text(KUNNR) as KUNNR,
+    Группировка as [Группировка местные]
+FROM [lib://Data/!QVD DATA/QVD/GD/BP_SAP_LOCAL.qvd](qvd)
+;
+
+MAPPING_BP_OTHERS:
+MAPPING LOAD
+    Text(KUNNR) as KUNNR,
+    Группировка as [Группировка другие]
+FROM [lib://Data/!QVD DATA/QVD/GD/BP_SAP_OTHERS.qvd](qvd)
+;
+
+
+MAPPING_VBAK_BSTNK:
+MAPPING LOAD
+	KUNNR,
+	BSTNK
+FROM [lib://Data/!QVD DATA/QVD/SAP/VBAK.qvd](qvd)
+;
+
+
+[Завод_Справочник]:
+MAPPING LOAD
+    Text(WERKS) as МВП,
+    NAME1 as "Название МВП"
+     
+FROM [lib://Data/!QVD DATA/QVD/SAP/T001W.qvd](qvd);
+
+
+MAPPING_COUNTRY2:
+MAPPING LOAD
+    KUNNR,
+    LAND1 as COUNTRY2
+FROM [lib://Data/!QVD DATA/QVD/SAP/KNA1.qvd](qvd)
+;
+[Страны_Справочник]:
+MAPPING LOAD
+  LAND1 as COUNTRY2,
+  LANDX50
+FROM [lib://Data/!QVD DATA/QVD/SAP/T005T.qvd](qvd);
+
+
+
+Data_P006:
+MAPPING LOAD
+  KUNRG as KUNNR,
+  Факт_продаж_ГП
+FROM [lib://Data/!QVD DATA/APP_006/PreModel/Data.qvd](qvd);
+///$tab FactTable
+FactTable:
+LOAD 0 as ID AutoGenerate 0;
+
+
+
+///$tab ACDOCA
+[10_ACDOCA]:
+NOCONCATENATE LOAD
+	RBUKRS,
+    KUNNR,
+    ZUONR,
+    AWREF,
+    if(BLART='SA', 'PE', BLART) as BLART1,
+    BLART,
+    WSL,
+    HSL,
+    KSL,
+    OSL,
+    BUDAT,
+    PRCTR,
+    RWCUR,
+    KOART,
+    RACCT,
+    AWREF_REV,
+    AUGDT,
+    BELNR,
+    BSTAT,
+    GJAHR,
+    VTWEG
+FROM [lib://Data/!QVD DATA/QVD/SAP/ACDOCA.qvd](qvd)
+WHERE Exists(RLDNR)
+and Exists(KUNNR)
+and RACCT like '22*' or RACCT like '32*'
+;
+
+
+///$tab Оплата/Возврат/Переоценка
+[ReceivedInvoice]:
+CONCATENATE(FactTable) LOAD
+    ///// sum( {<key={'Оплаиа'}  >} Сумма_UZS )
+	RBUKRS as БЕ,
+    KUNNR,
+    ZUONR,
+    AWREF, 
+   // BLART,      DG    XK
+   if (ApplyMap('KURS_DIFF', RBUKRS&BELNR&GJAHR) = 1, 'Переоценка',
+      if (Match(BLART, 'DG', 'DR', 'DS','RV', 'EX', 'RC', 'XD', 'XS', 'XF','XL','XK','PW', 'DB'), 'Принятый Инвойс',
+          if (Match(BLART, 'RF'), 'Возврат'  , //// + DG
+              if (Match(BLART, 'DZ', 'DA', 'XO'), 'Оплата',  //   +CL - ZR
+                  if (Match(BLART, 'DN', 'DD', 'VZ', 'ZD','EK', 'ND','RD', 'RW', 'RX', 'XP','DL', 'SA', 'PE', 'CL', 'DC'), 'Корректировка' // -DD XP
+    				 //  ?   оплата -CL
+	) 	)	)   )	) as key,
+    
+   
+     
+    WSL as Сумма_WAERS,
+    HSL as Сумма_UZS,
+    KSL as Сумма_ZUD,
+    OSL as Сумма_ZUDMVP,
+    BUDAT as [Дата проводки],
+    Text(Right(PRCTR, 4)) as МВП,
+    RWCUR as Валюта,
+    KOART, 	
+    RACCT,
+    if(AWREF_REV = ' ', 1, 0) as AWREF_REV,
+    if(IsNull(num(AUGDT)), 1, num(AUGDT)) as AUGDT,
+    BELNR,
+    BLART,
+    VTWEG
+//FROM [lib://Data/!QVD DATA/APP_002/PreModel/30_ACDOCA.qvd](qvd)
+Resident [10_ACDOCA]
+// WHERE Match(BLART, 'DG', 'DR', 'DS','RV', 'EX', 'RC', 'XD', 'XS', 'XF','XL','XK','PW','DL','RF', 'DZ', 'DA', 'XO', 'DN', 'DD', 'VZ', 'DB', 'ZD','EK', 'ND','RD', 'RW', 'RX', 'XP', 'SA', 'PE', 'CL', 'DC' )
+//or  ( ((BLART='SA' and BSTAT='U') or BLART='PE' ) and KOART ='S')
+;
+
+
+///$tab Data
+Data:
+NOCONCATENATE 
+LOAD *,
+	ApplyMap('Страны_Справочник', COUNTRY2, 'Нет данных') as "Страна",
+    KUNNR&МВП as KUNNR_KEY
+
+;
+NOCONCATENATE 
+LOAD *,
+	ApplyMap('Data_P006', KUNNR, 'Нет данных') as Факт_продаж_ГП,
+	ApplyMap('Завод_Справочник',  МВП, 'Нет данных') as "Название МВП",
+	ApplyMap('MAPPING_VBAK_BSTNK', KUNNR, 'Нет данных') as [Ссылка клиента],
+    ApplyMap('MAPPING_ZZ_DDS_ITEM', БЕ & '|' & KUNNR, 'Нет ZZ_DDS_ITEM') as ZZ_DDS_ITEM,
+    ApplyMap('MAPPING_NAME', KUNNR, 'Нет клиента') as Клиент,
+    ApplyMap('MAPPING_EXTCNUM', ZUONR, 'Нет контракта') as Контракт,
+    ApplyMap('MAPPING_VTWEG', AWREF, 'Нет канала продажи') as [Канал продажи],
+    ApplyMap('MAPPING_KONDA', AWREF, 'Нет дилера') as Дилер,
+    ApplyMap('MAPPING_COUNTRY', ADRNR, 'Нет COUNTRY') as COUNTRY,
+    ApplyMap('MAPPING_COUNTRY2', KUNNR, 'Нет COUNTRY') as COUNTRY2,
+    ApplyMap('MAPPING_REGION', ADRNR, 'Нет REGION') as REGION,
+    
+    
+	if([Группировка местные] <> 'Прочие', 'Местные', if([Группировка экспорт] <> 'Прочие' and VTWEG <> '21', 'Экспорт', if([Группировка другие] <> 'Прочие', [Группировка другие], 'Прочие'))) as Канал_продажи,
+
+	if([Группировка местные] <> 'Прочие', [Группировка местные], if([Группировка экспорт] <> 'Прочие', [Группировка экспорт], 'Прочие')) as Группировка,
+    [Дата проводки] as RDAY
+;
+NOCONCATENATE 
+LOAD *,
+	"Валюта" as Валюта_WAERS,
+    'ZUD' as Валюта_ZUD,
+    'UZS' as Валюта_UZS,
+    'ZUDMVP' as Валюта_ZUDMVP,
+    ApplyMap('MAPPING_ADRNR', AWREF, 'Нет ADRNR') as ADRNR,
+//     ApplyMap('MAPPING_BP_EXPORT', Text(KUNNR), 'Прочие') as [Группировка экспорт],
+    subfield(ApplyMap('MAPPING_BP_EXPORT', Text(KUNNR), 'Прочие|Прочие'), '|', 1) as [Группировка экспорт],
+	subfield(ApplyMap('MAPPING_BP_EXPORT', Text(KUNNR), 'Прочие|Прочие'), '|', 2) as KUNNR2,
+    ApplyMap('MAPPING_BP_LOCAL', Text(KUNNR), 'Прочие') as [Группировка местные],
+    ApplyMap('MAPPING_BP_OTHERS', Text(KUNNR), 'Прочие') as [Группировка другие]
+RESIDENT FactTable
+;
+DROP TABLE FactTable;
+
+
+HIST_PAYMENT_RAVSHAN:
+Concatenate(Data)
+Load
+	ApplyMap('Завод_Справочник',  Завод, 'Нет данных') as "Название МВП",
+RDAY,
+Клиент,
+KUNNR,
+Страна,
+Поставщик,
+Завод AS МВП,
+Оплата_итого
+;
+LOAD
+    "Дата оплаты" AS RDAY,
+    Клиент,
+    "Клиент SAP" as KUNNR,
+    Страна,
+//     "Номер оплаты",
+    Поставщик,
+    Text(Завод) as Завод,
+//     Контракт,
+//     Перечисление,
+//     Наличные,
+    Итого as Оплата_итого
+FROM [lib://Google_Drive - ilxombek.noilbekov@akfagroup.com (res_qlik.dev001)/14HEh9FysyDPnjl73ZZ42OLwiRTQJw3o1/Истор. данные по оплате 18-23гг.xlsx]
+(ooxml, embedded labels, table is [База 18-23 окт]);
+
+
+DROP TABLE INCLUDE,INCLUDE_NOT_INCLUDE;
+
+
+
+
+[Клиенты_Справочник]:
+LOAD
+    Дебитор & "Сбытовая организация" as KUNNR_KEY,
+    "Канал сбыта",
+//     Имя,
+//     Страна,
+    Канал,
+    "Регион клиента"
+FROM [lib://Google_Drive - ilxombek.noilbekov@akfagroup.com (res_qlik.dev001)/1w7Yx-8NWMbAPRy1FuxIlLVjL6YmeYq22/Контрагенты.xlsx]
+(ooxml, embedded labels, table is Клиенты);
+///$tab fINAL_DATA
+fINAL_DATA:
+NoConcatenate
+LOAD *,
+replace(МВП,' ','') as WERKS_ACCESS,
+ 
+ 
+  if(KUNNR2=KUNNR,'Экспорт', 'Местный') as [экспорт клиенты]
+Resident Data
+Where not match(МВП, '1001', '1002');
+// and not Match(BELNR, '1200000074','1200000076','1200000051','1200000050');
+ 
+ 
+Store fINAL_DATA into [lib://Data/!QVD DATA/APP_002/Model/Оплата_002.qvd] (qvd);
+drop table Data, [10_ACDOCA];
+
+///$tab Справочник
+[АЕИ_Справочник]:
+LOAD
+    SAP_code,
+    UMREN_UMREZ,
+    АЕИ_0,
+    АЕИ_1,
+    АЕИ_2,
+    АЕИ_3,
+    АЕИ_4,
+    UMREN_UMREZ_0,
+    UMREN_UMREZ_1,
+    UMREN_UMREZ_2,
+    UMREN_UMREZ_3,
+    UMREN_UMREZ_4
+FROM [lib://Data/!QVD DATA/APP_006/PreModel/АЕИ_Справочник.qvd](qvd)
+;
+
+///$tab Calendar
+$(Include=[lib://Data/Script/Calendar.qvs]);
+
+exit Script

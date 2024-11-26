@@ -1,0 +1,29 @@
+{
+  "qInfo": {
+    "qId": "b50a3c28-dfa1-4a4d-a1e0-3b249bc6194f",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Корректировка",
+    "qDef": "\r\nSum({<[AUGDT]={\">$(=date(round(num(MonthEnd(date(min([Месяц-Год-Num])))))))\"},key={'Корректировка'}>}$(='Сумма_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=date(round(num(MonthEnd(date(min([Месяц-Год-Num])))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1},key={'Корректировка'}>}$(='Сумма_'&'$(vCurrency)'))",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "# ##0,00",
+      "qDec": ",",
+      "qThou": " "
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Корректировка",
+    "description": "",
+    "tags": []
+  }
+}

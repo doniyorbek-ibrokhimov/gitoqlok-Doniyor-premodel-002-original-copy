@@ -1,0 +1,29 @@
+{
+  "qInfo": {
+    "qId": "QcmjW",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Переоценка",
+    "qDef": "\r\nSum({<[AUGDT]={\">$(=date(round(num(MonthEnd(date(min([Месяц-Год-Num])))))))\"},key={'Переоценка'}>}$(='Сумма_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=date(round(num(MonthEnd(date(min([Месяц-Год-Num])))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1},key={'Переоценка'}>}$(='Сумма_'&'$(vCurrency)'))",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "# ##0,00",
+      "qDec": ",",
+      "qThou": " "
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Переоценка",
+    "description": "",
+    "tags": []
+  }
+}

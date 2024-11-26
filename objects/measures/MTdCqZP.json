@@ -1,0 +1,24 @@
+{
+  "qInfo": {
+    "qId": "MTdCqZP",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "ЕИ",
+    "qDef": "Only('АЕИ_'&'$(vАЕИ)')",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "ЕИ",
+    "description": "",
+    "tags": []
+  }
+}

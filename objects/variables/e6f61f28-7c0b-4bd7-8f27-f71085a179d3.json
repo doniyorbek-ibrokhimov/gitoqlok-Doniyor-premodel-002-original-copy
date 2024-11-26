@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "e6f61f28-7c0b-4bd7-8f27-f71085a179d3",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "MinuteFormat",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "# ##0 min;-# ##0 min",
+  "qIsScriptCreated": true
+}

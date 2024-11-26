@@ -1,0 +1,38 @@
+///$tab Оплата/Возврат/Переоценка
+[ReceivedInvoice]:
+CONCATENATE(FactTable) LOAD
+    ///// sum( {<key={'Оплаиа'}  >} Сумма_UZS )
+	RBUKRS as БЕ,
+    KUNNR,
+    ZUONR,
+    AWREF, 
+   // BLART,      DG    XK
+   if (ApplyMap('KURS_DIFF', RBUKRS&BELNR&GJAHR) = 1, 'Переоценка',
+      if (Match(BLART, 'DG', 'DR', 'DS','RV', 'EX', 'RC', 'XD', 'XS', 'XF','XL','XK','PW', 'DB'), 'Принятый Инвойс',
+          if (Match(BLART, 'RF'), 'Возврат'  , //// + DG
+              if (Match(BLART, 'DZ', 'DA', 'XO'), 'Оплата',  //   +CL - ZR
+                  if (Match(BLART, 'DN', 'DD', 'VZ', 'ZD','EK', 'ND','RD', 'RW', 'RX', 'XP','DL', 'SA', 'PE', 'CL', 'DC'), 'Корректировка' // -DD XP
+    				 //  ?   оплата -CL
+	) 	)	)   )	) as key,
+    
+   
+     
+    WSL as Сумма_WAERS,
+    HSL as Сумма_UZS,
+    KSL as Сумма_ZUD,
+    OSL as Сумма_ZUDMVP,
+    BUDAT as [Дата проводки],
+    Text(Right(PRCTR, 4)) as МВП,
+    RWCUR as Валюта,
+    KOART, 	
+    RACCT,
+    if(AWREF_REV = ' ', 1, 0) as AWREF_REV,
+    if(IsNull(num(AUGDT)), 1, num(AUGDT)) as AUGDT,
+    BELNR,
+    BLART,
+    VTWEG
+//FROM [lib://Data/!QVD DATA/APP_002/PreModel/30_ACDOCA.qvd](qvd)
+Resident [10_ACDOCA]
+// WHERE Match(BLART, 'DG', 'DR', 'DS','RV', 'EX', 'RC', 'XD', 'XS', 'XF','XL','XK','PW','DL','RF', 'DZ', 'DA', 'XO', 'DN', 'DD', 'VZ', 'DB', 'ZD','EK', 'ND','RD', 'RW', 'RX', 'XP', 'SA', 'PE', 'CL', 'DC' )
+//or  ( ((BLART='SA' and BSTAT='U') or BLART='PE' ) and KOART ='S')
+;

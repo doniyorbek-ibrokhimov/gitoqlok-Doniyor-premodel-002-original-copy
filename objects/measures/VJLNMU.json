@@ -1,0 +1,29 @@
+{
+  "qInfo": {
+    "qId": "VJLNMU",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Задолженность на начало периода",
+    "qDef": "  Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=date(Min([Месяц-Год-Num])))\"}+{'31.12.1899'}, key={'Принятый Инвойс'}>}$(='Сумма_'&'$(vCurrency)'))\r\n+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=date(Min([Месяц-Год-Num])))\"}+{'31.12.1899'}, key={'Оплата'}>}$(='Сумма_'&'$(vCurrency)'))\n+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=date(Min([Месяц-Год-Num])))\"}+{'31.12.1899'}, key={'Возврат'}  >}$(='Сумма_'&'$(vCurrency)'))\n+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=date(Min([Месяц-Год-Num])))\"}+{'31.12.1899'}, key={'Корректировка'}>}$(='Сумма_'&'$(vCurrency)'))\n+ if(vRevaluation = 'Переоценка', Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=date(Min([Месяц-Год-Num])))\"}+{'31.12.1899'}, key={'Переоценка'}>}$(='Сумма_'&'$(vCurrency)')), 0)",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "# ##0,00",
+      "qDec": ",",
+      "qThou": " "
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Задолженность на начало периода",
+    "description": "",
+    "tags": []
+  }
+}

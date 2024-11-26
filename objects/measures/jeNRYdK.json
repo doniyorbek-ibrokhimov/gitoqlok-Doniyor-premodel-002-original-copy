@@ -1,0 +1,29 @@
+{
+  "qInfo": {
+    "qId": "jeNRYdK",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Задолженность на конец периода",
+    "qDef": "\r\n+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, key={'Принятый Инвойс'}, [AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{'31.12.1899'}>}$(='Сумма_'&'$(vCurrency)'))\n+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, key={'Оплата'}, [AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{'31.12.1899'}>}$(='Сумма_'&'$(vCurrency)'))\n+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, key={'Возврат'}, [AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{'31.12.1899'}>}$(='Сумма_'&'$(vCurrency)'))\n+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, key={'Корректировка'}, [AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{'31.12.1899'}>}$(='Сумма_'&'$(vCurrency)'))\n+ if(vRevaluation = 'Переоценка', Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, key={'Переоценка'}, [AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{'31.12.1899'}>}$(='Сумма_'&'$(vCurrency)')), 0)\n\n+ Sum({<[AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{'31.12.1899'}, key={'Принятый Инвойс'}>}$(='Сумма_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{'31.12.1899'}, key={'Оплата'}>}$(='Сумма_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{'31.12.1899'}, key={'Возврат'}>}$(='Сумма_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{'31.12.1899'}, key={'Корректировка'}>}$(='Сумма_'&'$(vCurrency)'))\n+ if(vRevaluation = 'Переоценка', Sum({<[AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{'31.12.1899'}, key={'Переоценка'} >}$(='Сумма_'&'$(vCurrency)')), 0)\n\n",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "# ##0,00",
+      "qDec": ",",
+      "qThou": " "
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Задолженность на конец периода",
+    "description": "",
+    "tags": []
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "a15ade40-8e51-4817-aa48-a7d8038421db",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "UZSFormat",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "# ##0 UZS;-# ##0 UZS",
+  "qIsScriptCreated": true
+}

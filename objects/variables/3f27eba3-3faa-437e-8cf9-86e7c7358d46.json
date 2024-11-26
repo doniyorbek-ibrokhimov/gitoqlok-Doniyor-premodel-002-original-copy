@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "3f27eba3-3faa-437e-8cf9-86e7c7358d46",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "USDFormat",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "# ##0,00 $;-# ##0,00 $",
+  "qIsScriptCreated": true
+}

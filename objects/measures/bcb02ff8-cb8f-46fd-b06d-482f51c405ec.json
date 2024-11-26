@@ -1,0 +1,24 @@
+{
+  "qInfo": {
+    "qId": "bcb02ff8-cb8f-46fd-b06d-482f51c405ec",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Сортировка Экспорт",
+    "qDef": "Pick(Match(vSortBy, 1, 2, 3, 4, 5, 6, 7, 8),\r\n\t[Задолженность на начало периода],\n    [Продажи Экспорт],\n    Возврат,\n    [Оплата Экспорт]*-1,\n    [Корректировка],\n    [Переоценка],\n    [Задолженность на конец периода экспорт],\n    0\n)",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Сортировка Экспорт",
+    "description": "",
+    "tags": []
+  }
+}

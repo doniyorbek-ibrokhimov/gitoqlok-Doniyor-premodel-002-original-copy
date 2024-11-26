@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "226c945e-0835-43cf-8c6a-7405a884cc1b",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "PercentFormat",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "0,00%",
+  "qIsScriptCreated": true
+}

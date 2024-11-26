@@ -1,0 +1,25 @@
+{
+  "qInfo": {
+    "qId": "GNJJGg",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Валюта",
+    "qDef": "Only($(='Валюта_'&'$(vCurrency)'))",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Валюта",
+    "description": "",
+    "tags": []
+  }
+}

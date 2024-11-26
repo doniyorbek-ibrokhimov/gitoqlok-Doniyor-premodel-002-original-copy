@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "297364b3-0326-4d6c-aa87-11e23471a403",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "vDocumentTitle",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "002 Взаиморасчеты с клиентами",
+  "qIsScriptCreated": true
+}

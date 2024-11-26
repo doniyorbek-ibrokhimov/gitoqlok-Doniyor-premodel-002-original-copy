@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "58df5107-1934-4dd1-9eb5-5c2abbfb2e64",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "vSortBy",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "7",
+  "qIsScriptCreated": true
+}

@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "dc21ed1e-cf80-44c5-b970-dc5f243e232e",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "vPrevMonth",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "окт",
+  "qIsScriptCreated": true
+}

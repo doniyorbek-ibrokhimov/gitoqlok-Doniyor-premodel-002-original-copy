@@ -1,0 +1,849 @@
+[
+  {
+    "qName": "ADRNR",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "AUGDT",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "AWREF",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "AWREF_REV",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "BELNR",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "BLART",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "COUNTRY",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "COUNTRY2",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "FullMonthFlag",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Календарь"
+    ]
+  },
+  {
+    "qName": "FullWeekFlag",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Календарь"
+    ]
+  },
+  {
+    "qName": "ID",
+    "qTags": [],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "KOART",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "KUNNR",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "KUNNR2",
+    "qTags": [],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "KUNNR_KEY",
+    "qTags": [
+      "$key"
+    ],
+    "qSrcTables": [
+      "Клиенты_Справочник",
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "RACCT",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "RDAY",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date",
+      "$key"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA",
+      "Календарь"
+    ]
+  },
+  {
+    "qName": "REGION",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "SAP_code",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "АЕИ_Справочник"
+    ]
+  },
+  {
+    "qName": "UMREN_UMREZ",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "АЕИ_Справочник"
+    ]
+  },
+  {
+    "qName": "UMREN_UMREZ_0",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "АЕИ_Справочник"
+    ]
+  },
+  {
+    "qName": "UMREN_UMREZ_1",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "АЕИ_Справочник"
+    ]
+  },
+  {
+    "qName": "UMREN_UMREZ_2",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "АЕИ_Справочник"
+    ]
+  },
+  {
+    "qName": "UMREN_UMREZ_3",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "АЕИ_Справочник"
+    ]
+  },
+  {
+    "qName": "UMREN_UMREZ_4",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "АЕИ_Справочник"
+    ]
+  },
+  {
+    "qName": "VTWEG",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "WERKS_ACCESS",
+    "qTags": [],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "ZUONR",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "ZZ_DDS_ITEM",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qIsHidden": true,
+    "qName": "_Конструктор",
+    "qTags": [
+      "$numeric",
+      "$hidden"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qName": "_Конструктор1",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$hidden"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qName": "_Конструктор2",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$hidden"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qName": "_Конструктор3",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$hidden"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qName": "_Конструктор4",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$hidden"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qName": "_Конструктор_Num",
+    "qTags": [
+      "$numeric",
+      "$hidden",
+      "$key"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qName": "_Конструктор_mea_Num",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$hidden"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qName": "key",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "АЕИ_0",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "АЕИ_Справочник"
+    ]
+  },
+  {
+    "qName": "АЕИ_1",
+    "qTags": [],
+    "qSrcTables": [
+      "АЕИ_Справочник"
+    ]
+  },
+  {
+    "qName": "АЕИ_2",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "АЕИ_Справочник"
+    ]
+  },
+  {
+    "qName": "АЕИ_3",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "АЕИ_Справочник"
+    ]
+  },
+  {
+    "qName": "АЕИ_4",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "АЕИ_Справочник"
+    ]
+  },
+  {
+    "qName": "БЕ",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Валюта",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Валюта_UZS",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Валюта_WAERS",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Валюта_ZUD",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Валюта_ZUDMVP",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Год",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Календарь"
+    ]
+  },
+  {
+    "qName": "Год-Квартал",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Календарь"
+    ]
+  },
+  {
+    "qName": "Год-Месяц",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Календарь"
+    ]
+  },
+  {
+    "qName": "Год-Неделя",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Календарь"
+    ]
+  },
+  {
+    "qName": "Группировка",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Группировка другие",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Группировка местные",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Группировка экспорт",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Дата",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Календарь"
+    ]
+  },
+  {
+    "qName": "Дата проводки",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Дата-День Недели",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Календарь"
+    ]
+  },
+  {
+    "qName": "День",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Календарь"
+    ]
+  },
+  {
+    "qName": "День Недели",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Календарь"
+    ]
+  },
+  {
+    "qName": "Дилер",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Канал",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Клиенты_Справочник"
+    ]
+  },
+  {
+    "qName": "Канал продажи",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Канал сбыта",
+    "qTags": [],
+    "qSrcTables": [
+      "Клиенты_Справочник"
+    ]
+  },
+  {
+    "qName": "Канал_продажи",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Квартал",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Календарь"
+    ]
+  },
+  {
+    "qName": "Клиент",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Контракт",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "МВП",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Месяц",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Календарь"
+    ]
+  },
+  {
+    "qName": "Месяц-Год",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Календарь"
+    ]
+  },
+  {
+    "qName": "Месяц-Год-Num",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Календарь"
+    ]
+  },
+  {
+    "qName": "Название МВП",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Недели",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Календарь"
+    ]
+  },
+  {
+    "qName": "Неделя",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Календарь"
+    ]
+  },
+  {
+    "qName": "Оплата_итого",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Поставщик",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Регион клиента",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Клиенты_Справочник"
+    ]
+  },
+  {
+    "qName": "Ссылка клиента",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Страна",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Сумма_UZS",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Сумма_WAERS",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Сумма_ZUD",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Сумма_ZUDMVP",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "Факт_продаж_ГП",
+    "qTags": [],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  },
+  {
+    "qName": "экспорт клиенты",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "fINAL_DATA"
+    ]
+  }
+]

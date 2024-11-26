@@ -1,0 +1,31 @@
+[
+  {
+    "qProperty": {
+      "qInfo": {
+        "qId": "5ebbe528-3ec2-4320-8c53-9db706a95c44",
+        "qType": "appprops"
+      },
+      "qMetaDef": {},
+      "sheetTitleBgColor": {
+        "color": "#006580",
+        "index": -1
+      },
+      "sheetTitleGradientColor": {
+        "color": "#ffffff",
+        "index": 1
+      },
+      "sheetTitleColor": "#ffffff",
+      "sheetLogoThumbnail": {
+        "qStaticContentUrlDef": {
+          "qUrl": "/appcontent/0dd10653-a823-4746-b76d-e9ec34c175f9/AKFA_GROUP.png"
+        }
+      },
+      "sheetLogoPosition": "",
+      "rtl": false,
+      "theme": "sense",
+      "disableCellNavMenu": false,
+      "defaultBookmarkId": null
+    },
+    "qChildren": []
+  }
+]

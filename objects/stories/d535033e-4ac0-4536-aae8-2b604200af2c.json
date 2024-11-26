@@ -1,0 +1,48 @@
+{
+  "qProperty": {
+    "qInfo": {
+      "qId": "d535033e-4ac0-4536-aae8-2b604200af2c",
+      "qType": "story"
+    },
+    "qMetaDef": {
+      "title": "Моя новая история",
+      "description": ""
+    },
+    "rank": -1,
+    "thumbnail": {
+      "qStaticContentUrlDef": {}
+    },
+    "qChildListDef": {
+      "qData": {
+        "title": "/title",
+        "rank": "/rank"
+      }
+    }
+  },
+  "qChildren": [
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "AewXjP",
+          "qType": "slide"
+        },
+        "qMetaDef": {},
+        "rank": -1,
+        "qChildListDef": {
+          "qData": {
+            "title": "/title",
+            "sheetId": "/sheetId",
+            "ratio": "/ratio",
+            "position": "/position",
+            "dataPath": "/dataPath",
+            "srcPath": "/srcPath",
+            "visualization": "/visualization",
+            "visualizationType": "/visualizationType",
+            "style": "/style"
+          }
+        }
+      },
+      "qChildren": []
+    }
+  ]
+}

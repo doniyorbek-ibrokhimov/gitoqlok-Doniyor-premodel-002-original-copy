@@ -1,0 +1,29 @@
+{
+  "qInfo": {
+    "qId": "egHpww",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Возврат местный",
+    "qDef": "//Sum({<[AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='Возврат_'&'$(vCurrency)'))\r\n{$<[Канал продажи]={10}>}\n[Возврат]\n/*\nSum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Возврат_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Возврат_'&'$(vCurrency)'))",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "# ##0,00",
+      "qDec": ",",
+      "qThou": " "
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Возврат местный",
+    "description": "",
+    "tags": []
+  }
+}

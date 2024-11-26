@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "4ebfbaa9-3ce4-43ce-87c7-6bc8edaf941a",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "vConstructor",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "WildMatch('|'&Concat(_Конструктор_Num,'|')&'|','*|$1|*')=1",
+  "qIsScriptCreated": true
+}

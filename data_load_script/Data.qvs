@@ -1,0 +1,88 @@
+///$tab Data
+Data:
+NOCONCATENATE 
+LOAD *,
+	ApplyMap('Страны_Справочник', COUNTRY2, 'Нет данных') as "Страна",
+    KUNNR&МВП as KUNNR_KEY
+
+;
+NOCONCATENATE 
+LOAD *,
+	ApplyMap('Data_P006', KUNNR, 'Нет данных') as Факт_продаж_ГП,
+	ApplyMap('Завод_Справочник',  МВП, 'Нет данных') as "Название МВП",
+	ApplyMap('MAPPING_VBAK_BSTNK', KUNNR, 'Нет данных') as [Ссылка клиента],
+    ApplyMap('MAPPING_ZZ_DDS_ITEM', БЕ & '|' & KUNNR, 'Нет ZZ_DDS_ITEM') as ZZ_DDS_ITEM,
+    ApplyMap('MAPPING_NAME', KUNNR, 'Нет клиента') as Клиент,
+    ApplyMap('MAPPING_EXTCNUM', ZUONR, 'Нет контракта') as Контракт,
+    ApplyMap('MAPPING_VTWEG', AWREF, 'Нет канала продажи') as [Канал продажи],
+    ApplyMap('MAPPING_KONDA', AWREF, 'Нет дилера') as Дилер,
+    ApplyMap('MAPPING_COUNTRY', ADRNR, 'Нет COUNTRY') as COUNTRY,
+    ApplyMap('MAPPING_COUNTRY2', KUNNR, 'Нет COUNTRY') as COUNTRY2,
+    ApplyMap('MAPPING_REGION', ADRNR, 'Нет REGION') as REGION,
+    
+    
+	if([Группировка местные] <> 'Прочие', 'Местные', if([Группировка экспорт] <> 'Прочие' and VTWEG <> '21', 'Экспорт', if([Группировка другие] <> 'Прочие', [Группировка другие], 'Прочие'))) as Канал_продажи,
+
+	if([Группировка местные] <> 'Прочие', [Группировка местные], if([Группировка экспорт] <> 'Прочие', [Группировка экспорт], 'Прочие')) as Группировка,
+    [Дата проводки] as RDAY
+;
+NOCONCATENATE 
+LOAD *,
+	"Валюта" as Валюта_WAERS,
+    'ZUD' as Валюта_ZUD,
+    'UZS' as Валюта_UZS,
+    'ZUDMVP' as Валюта_ZUDMVP,
+    ApplyMap('MAPPING_ADRNR', AWREF, 'Нет ADRNR') as ADRNR,
+//     ApplyMap('MAPPING_BP_EXPORT', Text(KUNNR), 'Прочие') as [Группировка экспорт],
+    subfield(ApplyMap('MAPPING_BP_EXPORT', Text(KUNNR), 'Прочие|Прочие'), '|', 1) as [Группировка экспорт],
+	subfield(ApplyMap('MAPPING_BP_EXPORT', Text(KUNNR), 'Прочие|Прочие'), '|', 2) as KUNNR2,
+    ApplyMap('MAPPING_BP_LOCAL', Text(KUNNR), 'Прочие') as [Группировка местные],
+    ApplyMap('MAPPING_BP_OTHERS', Text(KUNNR), 'Прочие') as [Группировка другие]
+RESIDENT FactTable
+;
+DROP TABLE FactTable;
+
+
+HIST_PAYMENT_RAVSHAN:
+Concatenate(Data)
+Load
+	ApplyMap('Завод_Справочник',  Завод, 'Нет данных') as "Название МВП",
+RDAY,
+Клиент,
+KUNNR,
+Страна,
+Поставщик,
+Завод AS МВП,
+Оплата_итого
+;
+LOAD
+    "Дата оплаты" AS RDAY,
+    Клиент,
+    "Клиент SAP" as KUNNR,
+    Страна,
+//     "Номер оплаты",
+    Поставщик,
+    Text(Завод) as Завод,
+//     Контракт,
+//     Перечисление,
+//     Наличные,
+    Итого as Оплата_итого
+FROM [lib://Google_Drive - ilxombek.noilbekov@akfagroup.com (res_qlik.dev001)/14HEh9FysyDPnjl73ZZ42OLwiRTQJw3o1/Истор. данные по оплате 18-23гг.xlsx]
+(ooxml, embedded labels, table is [База 18-23 окт]);
+
+
+DROP TABLE INCLUDE,INCLUDE_NOT_INCLUDE;
+
+
+
+
+[Клиенты_Справочник]:
+LOAD
+    Дебитор & "Сбытовая организация" as KUNNR_KEY,
+    "Канал сбыта",
+//     Имя,
+//     Страна,
+    Канал,
+    "Регион клиента"
+FROM [lib://Google_Drive - ilxombek.noilbekov@akfagroup.com (res_qlik.dev001)/1w7Yx-8NWMbAPRy1FuxIlLVjL6YmeYq22/Контрагенты.xlsx]
+(ooxml, embedded labels, table is Клиенты);

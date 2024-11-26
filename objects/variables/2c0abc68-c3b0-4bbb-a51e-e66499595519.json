@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "2c0abc68-c3b0-4bbb-a51e-e66499595519",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "vCurrency",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "UZS",
+  "qIsScriptCreated": true
+}

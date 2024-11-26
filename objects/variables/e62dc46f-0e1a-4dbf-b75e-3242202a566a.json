@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "e62dc46f-0e1a-4dbf-b75e-3242202a566a",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "TraficFormatGB",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "# ##0 Гб;-# ##0 Гб",
+  "qIsScriptCreated": true
+}

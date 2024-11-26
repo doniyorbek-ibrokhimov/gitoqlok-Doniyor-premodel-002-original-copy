@@ -1,0 +1,15 @@
+///$tab fINAL_DATA
+fINAL_DATA:
+NoConcatenate
+LOAD *,
+replace(МВП,' ','') as WERKS_ACCESS,
+ 
+ 
+  if(KUNNR2=KUNNR,'Экспорт', 'Местный') as [экспорт клиенты]
+Resident Data
+Where not match(МВП, '1001', '1002');
+// and not Match(BELNR, '1200000074','1200000076','1200000051','1200000050');
+ 
+ 
+Store fINAL_DATA into [lib://Data/!QVD DATA/APP_002/Model/Оплата_002.qvd] (qvd);
+drop table Data, [10_ACDOCA];

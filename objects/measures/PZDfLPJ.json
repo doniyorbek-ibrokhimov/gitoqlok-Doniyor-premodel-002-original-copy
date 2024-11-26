@@ -1,0 +1,28 @@
+{
+  "qInfo": {
+    "qId": "PZDfLPJ",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Взаимозачет",
+    "qDef": "Sum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Взаимозачет_'&'$(vCurrency)')) + Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Взаимозачет_'&'$(vCurrency)'))",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "# ##0,00",
+      "qDec": ",",
+      "qThou": " "
+    },
+    "isCustomFormatted": false,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Взаимозачет",
+    "description": "",
+    "tags": []
+  }
+}

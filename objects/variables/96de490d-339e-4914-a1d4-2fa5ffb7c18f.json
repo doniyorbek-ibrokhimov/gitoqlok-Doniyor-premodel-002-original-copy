@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "96de490d-339e-4914-a1d4-2fa5ffb7c18f",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "vStartLoadTime",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "16.11.2024 10:12:58",
+  "qIsScriptCreated": true
+}

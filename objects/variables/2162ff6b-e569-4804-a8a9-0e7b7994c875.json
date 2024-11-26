@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "2162ff6b-e569-4804-a8a9-0e7b7994c875",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "SpeedFormatMbS",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "# ##0,0 Мб/с;-# ##0,0 Мб/с",
+  "qIsScriptCreated": true
+}

@@ -1,0 +1,3438 @@
+{
+  "qProperty": {
+    "qInfo": {
+      "qId": "5417e0a7-edd2-4cce-ae86-da20b22e1e40",
+      "qType": "sheet"
+    },
+    "qMetaDef": {
+      "title": "3. Дашборд",
+      "description": ""
+    },
+    "rank": 7.75,
+    "thumbnail": {
+      "qStaticContentUrlDef": {
+        "qUrl": "/appcontent/0dd10653-a823-4746-b76d-e9ec34c175f9/sheet_thumb_1ab23b67-e4e9-414d-8020-868f90a3f809-0.589796749706121.png"
+      }
+    },
+    "columns": 30,
+    "rows": 15,
+    "cells": [
+      {
+        "name": "b829998b-bd1f-4854-a4d3-42331bd668f0",
+        "type": "table",
+        "col": 25,
+        "row": 2,
+        "colspan": 5,
+        "rowspan": 13,
+        "bounds": {
+          "y": 13.333333333333334,
+          "x": 83.33333333333334,
+          "width": 16.666666666666664,
+          "height": 86.66666666666667
+        }
+      },
+      {
+        "name": "7a8130b3-54c0-49bd-b71f-7f41017bec42",
+        "type": "action-button",
+        "col": 25,
+        "row": 0,
+        "colspan": 5,
+        "rowspan": 2,
+        "bounds": {
+          "y": 0,
+          "x": 83.33333333333334,
+          "width": 16.666666666666664,
+          "height": 13.333333333333334
+        }
+      },
+      {
+        "name": "4330ecf1-bd30-42b0-a1c5-c00fa5c93f21",
+        "type": "variable",
+        "col": 0,
+        "row": 1,
+        "colspan": 6,
+        "rowspan": 1,
+        "bounds": {
+          "y": 6.666666666666667,
+          "x": 0,
+          "width": 20,
+          "height": 6.666666666666667
+        }
+      },
+      {
+        "name": "973ec389-7e02-417a-85b1-64c71744c998",
+        "type": "table",
+        "col": 6,
+        "row": 0,
+        "colspan": 19,
+        "rowspan": 3,
+        "bounds": {
+          "y": 0,
+          "x": 20,
+          "width": 63.33333333333333,
+          "height": 20
+        }
+      },
+      {
+        "name": "685c5280-ddca-4a7c-bcaf-5d734d943f3a",
+        "type": "filterpane",
+        "col": 0,
+        "row": 0,
+        "colspan": 3,
+        "rowspan": 1,
+        "bounds": {
+          "y": 0,
+          "x": 0,
+          "width": 10,
+          "height": 6.666666666666667
+        }
+      },
+      {
+        "name": "a24f5ec1-d134-4d3f-9ea4-cba0f5a361bb",
+        "type": "filterpane",
+        "col": 3,
+        "row": 0,
+        "colspan": 3,
+        "rowspan": 1,
+        "bounds": {
+          "y": 0,
+          "x": 10,
+          "width": 10,
+          "height": 6.666666666666667
+        }
+      },
+      {
+        "name": "3d564c22-b011-47dc-b9c8-f03664f206ae",
+        "type": "container",
+        "col": 0,
+        "row": 3,
+        "colspan": 25,
+        "rowspan": 12,
+        "bounds": {
+          "y": 20,
+          "x": 0,
+          "width": 83.33333333333334,
+          "height": 80
+        }
+      },
+      {
+        "name": "61e39821-3aa5-4568-a673-a3ee36a90996",
+        "type": "SimpleFieldSelect",
+        "col": 0,
+        "row": 2,
+        "colspan": 6,
+        "rowspan": 1,
+        "bounds": {
+          "y": 13.333333333333334,
+          "x": 0,
+          "width": 20,
+          "height": 6.666666666666667
+        }
+      }
+    ],
+    "qChildListDef": {
+      "qData": {
+        "title": "/title"
+      }
+    },
+    "gridResolution": "medium",
+    "layoutOptions": {
+      "mobileLayout": "LIST"
+    },
+    "gridMode": "edit",
+    "showCondition": {
+      "qStringExpression": {
+        "qExpr": "=WildMatch(OSUser(), '*DEV*','*SQ.ALL*','*HSL.ALL*')"
+      }
+    }
+  },
+  "qChildren": [
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "b829998b-bd1f-4854-a4d3-42331bd668f0",
+          "qType": "table"
+        },
+        "qMetaDef": {},
+        "qHyperCubeDef": {
+          "qDimensions": [
+            {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "=KUNNR"
+                ],
+                "qFieldLabels": [
+                  "SAP код клиента"
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "fRvcHT",
+                "othersLabel": "Другие",
+                "textAlign": {
+                  "auto": true,
+                  "align": "left"
+                },
+                "representation": {
+                  "type": "text",
+                  "urlPosition": "dimension",
+                  "urlLabel": "",
+                  "linkUrl": "",
+                  "imageSetting": "label",
+                  "imageLabel": "",
+                  "imageUrl": "",
+                  "imageSize": "fitHeight",
+                  "imagePosition": "topCenter"
+                }
+              },
+              "qOtherTotalSpec": {
+                "qOtherMode": "OTHER_OFF",
+                "qOtherCounted": {
+                  "qv": "10"
+                },
+                "qOtherLimit": {
+                  "qv": "0"
+                },
+                "qOtherLimitMode": "OTHER_GE_LIMIT",
+                "qForceBadValueKeeping": true,
+                "qApplyEvenWhenPossiblyWrongResult": true,
+                "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                "qTotalMode": "TOTAL_OFF",
+                "qReferencedExpression": {}
+              },
+              "qOtherLabel": {
+                "qv": "Другие"
+              },
+              "qTotalLabel": {},
+              "qCalcCond": {},
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              }
+            },
+            {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "Клиент"
+                ],
+                "qFieldLabels": [
+                  ""
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qSortByExpression": 1,
+                    "qExpression": {
+                      "qv": "[Задолженность на конец]"
+                    }
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": false,
+                "cId": "jLcTr",
+                "othersLabel": "Другие",
+                "textAlign": {
+                  "auto": true,
+                  "align": "left"
+                },
+                "representation": {
+                  "type": "text",
+                  "urlPosition": "dimension",
+                  "urlLabel": "",
+                  "linkUrl": "",
+                  "imageSetting": "label",
+                  "imageLabel": "",
+                  "imageUrl": "",
+                  "imageSize": "fitHeight",
+                  "imagePosition": "topCenter"
+                }
+              },
+              "qOtherTotalSpec": {
+                "qOtherMode": "OTHER_OFF",
+                "qOtherCounted": {
+                  "qv": "10"
+                },
+                "qOtherLimit": {
+                  "qv": "0"
+                },
+                "qOtherLimitMode": "OTHER_GE_LIMIT",
+                "qForceBadValueKeeping": true,
+                "qApplyEvenWhenPossiblyWrongResult": true,
+                "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                "qTotalMode": "TOTAL_OFF",
+                "qReferencedExpression": {}
+              },
+              "qOtherLabel": {
+                "qv": "Другие"
+              },
+              "qTotalLabel": {},
+              "qCalcCond": {},
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              }
+            }
+          ],
+          "qMeasures": [
+            {
+              "qDef": {
+                "qLabel": "Задолженность на конец периода",
+                "qTags": [],
+                "qGrouping": "N",
+                "qDef": "{$<[Канал продажи]={10}>}\r\n+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{1}>}$(='Принятый_инвойс_'&'$(vCurrency)'))\n+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{1}>}$(='Оплата_'&'$(vCurrency)'))\n+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{1}>}$(='Возврат_'&'$(vCurrency)'))\n+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{1}>}$(='Корректировка_'&'$(vCurrency)'))\n+ if(vRevaluation = 'Переоценка', Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{1}>}$(='Переоценка_'&'$(vCurrency)')), 0)\n+ Sum({<[AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{1}>}$(='Принятый_инвойс_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{1}>}$(='Оплата_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{1}>}$(='Возврат_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{1}>}$(='Корректировка_'&'$(vCurrency)'))\n+ if(vRevaluation = 'Переоценка', Sum({<[AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{1}>}$(='Переоценка_'&'$(vCurrency)')), 0)\n\n\n\n\n/*\n+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='Принятый_инвойс_'&'$(vCurrency)'))\n+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='Оплата_'&'$(vCurrency)'))\n+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='Возврат_'&'$(vCurrency)'))\n+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='Корректировка_'&'$(vCurrency)'))\n//+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='ДНО_'&'$(vCurrency)'))\n+ if(vRevaluation = 'Переоценка', Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='Переоценка_'&'$(vCurrency)')), 0)\n\n+ Sum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Принятый_инвойс_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Принятый_инвойс_'&'$(vCurrency)'))\n//+ Sum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='ДНО_'&'$(vCurrency)'))\n//+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='ДНО_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Возврат_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Возврат_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Оплата_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Оплата_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Корректировка_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Корректировка_'&'$(vCurrency)'))\n+ if(vRevaluation = 'Переоценка', Sum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Переоценка_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Переоценка_'&'$(vCurrency)')), 0)  \n*/",
+                "qNumFormat": {
+                  "qType": "F",
+                  "qnDec": 2,
+                  "qUseThou": 0,
+                  "qFmt": "# ##0,00",
+                  "qDec": ",",
+                  "qThou": " "
+                },
+                "qAggrFunc": "Expr",
+                "qAccumulate": 0,
+                "qActiveExpression": 0,
+                "qExpressions": [],
+                "autoSort": true,
+                "cId": "jveMPLT",
+                "numFormatFromTemplate": true,
+                "textAlign": {
+                  "auto": true,
+                  "align": "left"
+                },
+                "representation": {
+                  "type": "text",
+                  "indicator": {
+                    "showTextValues": true,
+                    "applySegmentColors": false,
+                    "position": "right"
+                  },
+                  "miniChart": {
+                    "type": "sparkline",
+                    "colors": {
+                      "main": {
+                        "index": 6
+                      },
+                      "max": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "min": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "first": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "last": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "positive": {
+                        "index": 6
+                      },
+                      "negative": {
+                        "index": 10,
+                        "color": "#f93f17"
+                      }
+                    },
+                    "showDots": true,
+                    "yAxis": {
+                      "scale": "local",
+                      "position": "auto"
+                    }
+                  },
+                  "imageSetting": "label",
+                  "imageLabel": "",
+                  "imageUrl": "",
+                  "imageSize": "fitHeight",
+                  "imagePosition": "topCenter"
+                },
+                "conditionalColoring": {
+                  "segments": {
+                    "limits": [],
+                    "paletteColors": [
+                      {
+                        "index": 6,
+                        "icon": "dot"
+                      }
+                    ]
+                  }
+                },
+                "isCustomFormatted": false
+              },
+              "qSortBy": {
+                "qSortByNumeric": -1,
+                "qSortByLoadOrder": 1,
+                "qExpression": {}
+              },
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCond": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qTrendLines": [],
+              "qMiniChartDef": {
+                "qSortBy": {
+                  "qExpression": {}
+                },
+                "qOtherTotalSpec": {
+                  "qOtherMode": "OTHER_OFF",
+                  "qOtherCounted": {},
+                  "qOtherLimit": {},
+                  "qOtherLimitMode": "OTHER_GT_LIMIT",
+                  "qSuppressOther": true,
+                  "qForceBadValueKeeping": true,
+                  "qApplyEvenWhenPossiblyWrongResult": true,
+                  "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                  "qTotalMode": "TOTAL_OFF",
+                  "qReferencedExpression": {}
+                },
+                "qMaxNumberPoints": -1,
+                "qAttributeExpressions": [],
+                "qNullSuppression": true
+              }
+            }
+          ],
+          "qInterColumnSortOrder": [
+            1,
+            0,
+            2
+          ],
+          "qSuppressMissing": true,
+          "qInitialDataFetch": [],
+          "qReductionMode": "N",
+          "qMode": "S",
+          "qPseudoDimPos": -1,
+          "qNoOfLeftDims": -1,
+          "qMaxStackedCells": 5000,
+          "qCalcCond": {},
+          "qTitle": {},
+          "qCalcCondition": {
+            "qCond": {},
+            "qMsg": {}
+          },
+          "qColumnOrder": [
+            0,
+            1,
+            2
+          ],
+          "qExpansionState": [],
+          "qDynamicScript": [],
+          "columnOrder": [
+            0,
+            1,
+            2
+          ],
+          "columnWidths": [
+            42,
+            63,
+            -1
+          ],
+          "qLayoutExclude": {
+            "qHyperCubeDef": {
+              "qDimensions": [],
+              "qMeasures": [],
+              "qInterColumnSortOrder": [],
+              "qInitialDataFetch": [],
+              "qReductionMode": "N",
+              "qMode": "S",
+              "qPseudoDimPos": -1,
+              "qNoOfLeftDims": -1,
+              "qMaxStackedCells": 5000,
+              "qCalcCond": {},
+              "qTitle": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qColumnOrder": [],
+              "qExpansionState": [],
+              "qDynamicScript": []
+            }
+          }
+        },
+        "script": "",
+        "search": {
+          "sorting": "auto"
+        },
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": true,
+        "showDetails": false,
+        "showDetailsExpression": false,
+        "components": [],
+        "totals": {
+          "show": true,
+          "position": "noTotals",
+          "label": "Итоги"
+        },
+        "scrolling": {
+          "horizontal": true,
+          "keepFirstColumnInView": false,
+          "keepFirstColumnInViewTouch": false
+        },
+        "multiline": {
+          "wrapTextInHeaders": true,
+          "wrapTextInCells": true
+        },
+        "visualization": "table"
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "7a8130b3-54c0-49bd-b71f-7f41017bec42",
+          "qType": "action-button"
+        },
+        "qMetaDef": {},
+        "actions": [],
+        "navigation": {
+          "action": "goToSheet",
+          "appId": "",
+          "sheet": "8470fefc-4e7e-4c43-9fb6-a2eca03f040e",
+          "story": "",
+          "websiteUrl": "",
+          "sameWindow": false,
+          "odagLink": ""
+        },
+        "useEnabledCondition": false,
+        "enabledCondition": 1,
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": true,
+        "showDetails": false,
+        "showDetailsExpression": false,
+        "style": {
+          "label": "ТАБЛИЦА",
+          "font": {
+            "size": 0.5,
+            "useColorExpression": false,
+            "color": {
+              "index": -1,
+              "color": null
+            },
+            "colorExpression": "",
+            "style": {
+              "bold": true,
+              "italic": false,
+              "underline": false
+            },
+            "align": "center"
+          },
+          "background": {
+            "useColorExpression": false,
+            "color": {
+              "index": -1,
+              "color": null
+            },
+            "colorExpression": "",
+            "useImage": false,
+            "size": "auto",
+            "position": "centerCenter",
+            "url": {
+              "qStaticContentUrlDef": {}
+            }
+          },
+          "border": {
+            "useBorder": false,
+            "radius": 0,
+            "width": 0,
+            "useColorExpression": false,
+            "color": {
+              "index": -1,
+              "color": null
+            },
+            "colorExpression": ""
+          },
+          "icon": {
+            "useIcon": true,
+            "iconType": "high-resolution",
+            "position": "left"
+          }
+        },
+        "visualization": "action-button",
+        "version": "1.22.0"
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "4330ecf1-bd30-42b0-a1c5-c00fa5c93f21",
+          "qType": "variable"
+        },
+        "qMetaDef": {},
+        "showTitles": false,
+        "title": "Дневной расход",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": true,
+        "showDetails": true,
+        "showDetailsExpression": false,
+        "variableName": "vCurrency",
+        "style": "qlik",
+        "width": "fill",
+        "customwidth": "",
+        "render": "b",
+        "alternatives": [
+          {
+            "value": "ZUD",
+            "label": "ZUD",
+            "cId": "PYnS"
+          },
+          {
+            "value": "UZS",
+            "label": "UZS",
+            "cId": "mNGWBb"
+          },
+          {
+            "value": "ZUDMVP",
+            "label": "ZUDMVP",
+            "cId": "VqrcZ"
+          }
+        ],
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "rangelabel": false,
+        "visualization": "variable",
+        "variableValue": {
+          "qStringExpression": {
+            "qExpr": "=vCurrency"
+          }
+        },
+        "version": "6.20.0",
+        "extensionMeta": {
+          "translationKey": "",
+          "icon": "puzzle",
+          "iconChar": "puzzle",
+          "isLibraryItem": true,
+          "visible": true,
+          "name": "Variable",
+          "description": "Variable extension",
+          "template": "variable",
+          "iconPath": "M14.5,9 L13,9 L13,3.3 C13,3.1 12.9,3 12.7,3 L8,3 L8,1.5 C8,0.7 7.3,0 6.5,0 C5.7,0 5,0.7 5,1.5 L5,3 L0.3,3 C0.1,3 0,3.1 0,3.3 L0,9 L1.5,9 C2.3,9 3,9.7 3,10.5 C3,11.3 2.3,12 1.5,12 L0,12 L0,15.7 C0,15.9 0.1,16 0.3,16 L5,16 L5,14.5 C5,13.7 5.7,13 6.5,13 C7.3,13 8,13.7 8,14.5 L8,16 L12.7,16 C12.9,16 13,15.9 13,15.7 L13,12 L14.5,12 C15.3,12 16,11.3 16,10.5 C16,9.7 15.3,9 14.5,9 Z",
+          "isThirdParty": true,
+          "version": "2.3.1",
+          "type": "visualization",
+          "author": "Erik Wetterberg"
+        },
+        "qLayoutExclude": {
+          "disabled": {
+            "qExtendsId": "",
+            "buttonMode": "rowfill",
+            "updateondrag": false,
+            "valueType": "x",
+            "dynamicvalues": ""
+          }
+        }
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "973ec389-7e02-417a-85b1-64c71744c998",
+          "qType": "table"
+        },
+        "qMetaDef": {},
+        "qHyperCubeDef": {
+          "qDimensions": [
+            {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "Год"
+                ],
+                "qFieldLabels": [
+                  ""
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByNumeric": -1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": false,
+                "cId": "pynkjg",
+                "othersLabel": "Другие",
+                "textAlign": {
+                  "auto": true,
+                  "align": "left"
+                },
+                "representation": {
+                  "type": "text",
+                  "urlPosition": "dimension",
+                  "urlLabel": "",
+                  "linkUrl": "",
+                  "imageSetting": "label",
+                  "imageLabel": "",
+                  "imageUrl": "",
+                  "imageSize": "fitHeight",
+                  "imagePosition": "topCenter"
+                }
+              },
+              "qOtherTotalSpec": {
+                "qOtherMode": "OTHER_OFF",
+                "qOtherCounted": {
+                  "qv": "10"
+                },
+                "qOtherLimit": {
+                  "qv": "0"
+                },
+                "qOtherLimitMode": "OTHER_GE_LIMIT",
+                "qForceBadValueKeeping": true,
+                "qApplyEvenWhenPossiblyWrongResult": true,
+                "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                "qTotalMode": "TOTAL_OFF",
+                "qReferencedExpression": {}
+              },
+              "qOtherLabel": {
+                "qv": "Другие"
+              },
+              "qTotalLabel": {},
+              "qCalcCond": {},
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              }
+            }
+          ],
+          "qMeasures": [
+            {
+              "qDef": {
+                "qLabel": "Продажи",
+                "qTags": [],
+                "qGrouping": "N",
+                "qDef": "{$<[Канал продажи]={10}>}\r\nПродажи\n/*\nSum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Принятый_инвойс_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Принятый_инвойс_'&'$(vCurrency)'))",
+                "qNumFormat": {
+                  "qType": "F",
+                  "qnDec": 2,
+                  "qUseThou": 0,
+                  "qFmt": "# ##0,00",
+                  "qDec": ",",
+                  "qThou": " "
+                },
+                "qAggrFunc": "Expr",
+                "qAccumulate": 0,
+                "qActiveExpression": 0,
+                "qExpressions": [],
+                "autoSort": true,
+                "cId": "DWjdhs",
+                "numFormatFromTemplate": true,
+                "textAlign": {
+                  "auto": true,
+                  "align": "left"
+                },
+                "representation": {
+                  "type": "text",
+                  "indicator": {
+                    "showTextValues": true,
+                    "applySegmentColors": false,
+                    "position": "right"
+                  },
+                  "miniChart": {
+                    "type": "sparkline",
+                    "colors": {
+                      "main": {
+                        "index": 6
+                      },
+                      "max": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "min": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "first": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "last": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "positive": {
+                        "index": 6
+                      },
+                      "negative": {
+                        "index": 10,
+                        "color": "#f93f17"
+                      }
+                    },
+                    "showDots": true,
+                    "yAxis": {
+                      "scale": "local",
+                      "position": "auto"
+                    }
+                  },
+                  "imageSetting": "label",
+                  "imageLabel": "",
+                  "imageUrl": "",
+                  "imageSize": "fitHeight",
+                  "imagePosition": "topCenter"
+                },
+                "conditionalColoring": {
+                  "segments": {
+                    "limits": [],
+                    "paletteColors": [
+                      {
+                        "index": 6,
+                        "icon": "dot"
+                      }
+                    ]
+                  }
+                },
+                "isCustomFormatted": false
+              },
+              "qSortBy": {
+                "qSortByNumeric": -1,
+                "qSortByLoadOrder": 1,
+                "qExpression": {}
+              },
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCond": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qTrendLines": [],
+              "qMiniChartDef": {
+                "qSortBy": {
+                  "qExpression": {}
+                },
+                "qOtherTotalSpec": {
+                  "qOtherMode": "OTHER_OFF",
+                  "qOtherCounted": {},
+                  "qOtherLimit": {},
+                  "qOtherLimitMode": "OTHER_GT_LIMIT",
+                  "qSuppressOther": true,
+                  "qForceBadValueKeeping": true,
+                  "qApplyEvenWhenPossiblyWrongResult": true,
+                  "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                  "qTotalMode": "TOTAL_OFF",
+                  "qReferencedExpression": {}
+                },
+                "qMaxNumberPoints": -1,
+                "qAttributeExpressions": [],
+                "qNullSuppression": true
+              }
+            },
+            {
+              "qDef": {
+                "qLabel": "Добав нач остаток",
+                "qTags": [],
+                "qGrouping": "N",
+                "qDef": "{$<[Канал продажи]={10}>}\r\n//Sum({<[AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='ДНО_'&'$(vCurrency)'))\nSum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='ДНО_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='ДНО_'&'$(vCurrency)'))",
+                "qNumFormat": {
+                  "qType": "F",
+                  "qnDec": 2,
+                  "qUseThou": 0,
+                  "qFmt": "# ##0,00",
+                  "qDec": ",",
+                  "qThou": " "
+                },
+                "qAggrFunc": "Expr",
+                "qAccumulate": 0,
+                "qActiveExpression": 0,
+                "qExpressions": [],
+                "autoSort": true,
+                "cId": "EPfaPr",
+                "numFormatFromTemplate": true,
+                "textAlign": {
+                  "auto": true,
+                  "align": "left"
+                },
+                "representation": {
+                  "type": "text",
+                  "indicator": {
+                    "showTextValues": true,
+                    "applySegmentColors": false,
+                    "position": "right"
+                  },
+                  "miniChart": {
+                    "type": "sparkline",
+                    "colors": {
+                      "main": {
+                        "index": 6
+                      },
+                      "max": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "min": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "first": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "last": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "positive": {
+                        "index": 6
+                      },
+                      "negative": {
+                        "index": 10,
+                        "color": "#f93f17"
+                      }
+                    },
+                    "showDots": true,
+                    "yAxis": {
+                      "scale": "local",
+                      "position": "auto"
+                    }
+                  },
+                  "imageSetting": "label",
+                  "imageLabel": "",
+                  "imageUrl": "",
+                  "imageSize": "fitHeight",
+                  "imagePosition": "topCenter"
+                },
+                "conditionalColoring": {
+                  "segments": {
+                    "limits": [],
+                    "paletteColors": [
+                      {
+                        "index": 6,
+                        "icon": "dot"
+                      }
+                    ]
+                  }
+                },
+                "isCustomFormatted": false
+              },
+              "qSortBy": {
+                "qSortByNumeric": -1,
+                "qSortByLoadOrder": 1,
+                "qExpression": {}
+              },
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCond": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qTrendLines": [],
+              "qMiniChartDef": {
+                "qSortBy": {
+                  "qExpression": {}
+                },
+                "qOtherTotalSpec": {
+                  "qOtherMode": "OTHER_OFF",
+                  "qOtherCounted": {},
+                  "qOtherLimit": {},
+                  "qOtherLimitMode": "OTHER_GT_LIMIT",
+                  "qSuppressOther": true,
+                  "qForceBadValueKeeping": true,
+                  "qApplyEvenWhenPossiblyWrongResult": true,
+                  "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                  "qTotalMode": "TOTAL_OFF",
+                  "qReferencedExpression": {}
+                },
+                "qMaxNumberPoints": -1,
+                "qAttributeExpressions": [],
+                "qNullSuppression": true
+              }
+            },
+            {
+              "qDef": {
+                "qLabel": "Возврат",
+                "qTags": [],
+                "qGrouping": "N",
+                "qDef": "{$<[Канал продажи]={10}>}\r\nВозврат\n/*\n//Sum({<[AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='Возврат_'&'$(vCurrency)'))\nSum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Возврат_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Возврат_'&'$(vCurrency)'))",
+                "qNumFormat": {
+                  "qType": "F",
+                  "qnDec": 2,
+                  "qUseThou": 0,
+                  "qFmt": "# ##0,00",
+                  "qDec": ",",
+                  "qThou": " "
+                },
+                "qAggrFunc": "Expr",
+                "qAccumulate": 0,
+                "qActiveExpression": 0,
+                "qExpressions": [],
+                "autoSort": true,
+                "cId": "BpKFym",
+                "numFormatFromTemplate": true,
+                "textAlign": {
+                  "auto": true,
+                  "align": "left"
+                },
+                "representation": {
+                  "type": "text",
+                  "indicator": {
+                    "showTextValues": true,
+                    "applySegmentColors": false,
+                    "position": "right"
+                  },
+                  "miniChart": {
+                    "type": "sparkline",
+                    "colors": {
+                      "main": {
+                        "index": 6
+                      },
+                      "max": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "min": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "first": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "last": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "positive": {
+                        "index": 6
+                      },
+                      "negative": {
+                        "index": 10,
+                        "color": "#f93f17"
+                      }
+                    },
+                    "showDots": true,
+                    "yAxis": {
+                      "scale": "local",
+                      "position": "auto"
+                    }
+                  },
+                  "imageSetting": "label",
+                  "imageLabel": "",
+                  "imageUrl": "",
+                  "imageSize": "fitHeight",
+                  "imagePosition": "topCenter"
+                },
+                "conditionalColoring": {
+                  "segments": {
+                    "limits": [],
+                    "paletteColors": [
+                      {
+                        "index": 6,
+                        "icon": "dot"
+                      }
+                    ]
+                  }
+                },
+                "isCustomFormatted": false
+              },
+              "qSortBy": {
+                "qSortByNumeric": -1,
+                "qSortByLoadOrder": 1,
+                "qExpression": {}
+              },
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCond": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qTrendLines": [],
+              "qMiniChartDef": {
+                "qSortBy": {
+                  "qExpression": {}
+                },
+                "qOtherTotalSpec": {
+                  "qOtherMode": "OTHER_OFF",
+                  "qOtherCounted": {},
+                  "qOtherLimit": {},
+                  "qOtherLimitMode": "OTHER_GT_LIMIT",
+                  "qSuppressOther": true,
+                  "qForceBadValueKeeping": true,
+                  "qApplyEvenWhenPossiblyWrongResult": true,
+                  "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                  "qTotalMode": "TOTAL_OFF",
+                  "qReferencedExpression": {}
+                },
+                "qMaxNumberPoints": -1,
+                "qAttributeExpressions": [],
+                "qNullSuppression": true
+              }
+            },
+            {
+              "qDef": {
+                "qLabel": "Оплата",
+                "qTags": [],
+                "qGrouping": "N",
+                "qDef": "{$<[Канал продажи]={10}>}\r\n[Оплата]\n\n/*\n//Sum({<[AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='Оплата_'&'$(vCurrency)'))\nSum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Оплата_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Оплата_'&'$(vCurrency)'))",
+                "qNumFormat": {
+                  "qType": "F",
+                  "qnDec": 2,
+                  "qUseThou": 0,
+                  "qFmt": "# ##0,00",
+                  "qDec": ",",
+                  "qThou": " "
+                },
+                "qAggrFunc": "Expr",
+                "qAccumulate": 0,
+                "qActiveExpression": 0,
+                "qExpressions": [],
+                "autoSort": true,
+                "cId": "UmRVv",
+                "numFormatFromTemplate": true,
+                "textAlign": {
+                  "auto": true,
+                  "align": "left"
+                },
+                "representation": {
+                  "type": "text",
+                  "indicator": {
+                    "showTextValues": true,
+                    "applySegmentColors": false,
+                    "position": "right"
+                  },
+                  "miniChart": {
+                    "type": "sparkline",
+                    "colors": {
+                      "main": {
+                        "index": 6
+                      },
+                      "max": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "min": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "first": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "last": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "positive": {
+                        "index": 6
+                      },
+                      "negative": {
+                        "index": 10,
+                        "color": "#f93f17"
+                      }
+                    },
+                    "showDots": true,
+                    "yAxis": {
+                      "scale": "local",
+                      "position": "auto"
+                    }
+                  },
+                  "imageSetting": "label",
+                  "imageLabel": "",
+                  "imageUrl": "",
+                  "imageSize": "fitHeight",
+                  "imagePosition": "topCenter"
+                },
+                "conditionalColoring": {
+                  "segments": {
+                    "limits": [],
+                    "paletteColors": [
+                      {
+                        "index": 6,
+                        "icon": "dot"
+                      }
+                    ]
+                  }
+                },
+                "isCustomFormatted": false
+              },
+              "qSortBy": {
+                "qSortByNumeric": -1,
+                "qSortByLoadOrder": 1,
+                "qExpression": {}
+              },
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCond": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qTrendLines": [],
+              "qMiniChartDef": {
+                "qSortBy": {
+                  "qExpression": {}
+                },
+                "qOtherTotalSpec": {
+                  "qOtherMode": "OTHER_OFF",
+                  "qOtherCounted": {},
+                  "qOtherLimit": {},
+                  "qOtherLimitMode": "OTHER_GT_LIMIT",
+                  "qSuppressOther": true,
+                  "qForceBadValueKeeping": true,
+                  "qApplyEvenWhenPossiblyWrongResult": true,
+                  "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                  "qTotalMode": "TOTAL_OFF",
+                  "qReferencedExpression": {}
+                },
+                "qMaxNumberPoints": -1,
+                "qAttributeExpressions": [],
+                "qNullSuppression": true
+              }
+            },
+            {
+              "qDef": {
+                "qLabel": "Переоценка",
+                "qTags": [],
+                "qGrouping": "N",
+                "qDef": "//Sum({<[AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='Переоценка_'&'$(vCurrency)'))\r\n{$<[Канал продажи]={10}>}\n[Переоценка]\n/*\nSum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Переоценка_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Переоценка_'&'$(vCurrency)'))",
+                "qNumFormat": {
+                  "qType": "F",
+                  "qnDec": 2,
+                  "qUseThou": 0,
+                  "qFmt": "# ##0,00",
+                  "qDec": ",",
+                  "qThou": " "
+                },
+                "qAggrFunc": "Expr",
+                "qAccumulate": 0,
+                "qActiveExpression": 0,
+                "qExpressions": [],
+                "autoSort": true,
+                "cId": "hZEYf",
+                "numFormatFromTemplate": true,
+                "textAlign": {
+                  "auto": true,
+                  "align": "left"
+                },
+                "representation": {
+                  "type": "text",
+                  "indicator": {
+                    "showTextValues": true,
+                    "applySegmentColors": false,
+                    "position": "right"
+                  },
+                  "miniChart": {
+                    "type": "sparkline",
+                    "colors": {
+                      "main": {
+                        "index": 6
+                      },
+                      "max": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "min": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "first": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "last": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "positive": {
+                        "index": 6
+                      },
+                      "negative": {
+                        "index": 10,
+                        "color": "#f93f17"
+                      }
+                    },
+                    "showDots": true,
+                    "yAxis": {
+                      "scale": "local",
+                      "position": "auto"
+                    }
+                  },
+                  "imageSetting": "label",
+                  "imageLabel": "",
+                  "imageUrl": "",
+                  "imageSize": "fitHeight",
+                  "imagePosition": "topCenter"
+                },
+                "conditionalColoring": {
+                  "segments": {
+                    "limits": [],
+                    "paletteColors": [
+                      {
+                        "index": 6,
+                        "icon": "dot"
+                      }
+                    ]
+                  }
+                },
+                "isCustomFormatted": false
+              },
+              "qSortBy": {
+                "qSortByNumeric": -1,
+                "qSortByLoadOrder": 1,
+                "qExpression": {}
+              },
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCond": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qTrendLines": [],
+              "qMiniChartDef": {
+                "qSortBy": {
+                  "qExpression": {}
+                },
+                "qOtherTotalSpec": {
+                  "qOtherMode": "OTHER_OFF",
+                  "qOtherCounted": {},
+                  "qOtherLimit": {},
+                  "qOtherLimitMode": "OTHER_GT_LIMIT",
+                  "qSuppressOther": true,
+                  "qForceBadValueKeeping": true,
+                  "qApplyEvenWhenPossiblyWrongResult": true,
+                  "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                  "qTotalMode": "TOTAL_OFF",
+                  "qReferencedExpression": {}
+                },
+                "qMaxNumberPoints": -1,
+                "qAttributeExpressions": [],
+                "qNullSuppression": true
+              }
+            },
+            {
+              "qDef": {
+                "qLabel": "Задолженность на конец периода",
+                "qTags": [],
+                "qGrouping": "N",
+                "qDef": "{$<[Канал продажи]={10}>}\r\n[Задолженность на конец периода]\n/*\nrangesum(\n    + Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='Принятый_инвойс_'&'$(vCurrency)'))\n    + Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='Оплата_'&'$(vCurrency)'))\n    + Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='Возврат_'&'$(vCurrency)'))\n    + Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='ДНО_'&'$(vCurrency)'))\n    + if(vRevaluation = 'Переоценка', Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='Переоценка_'&'$(vCurrency)')), 0)\n\n    + Sum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Принятый_инвойс_'&'$(vCurrency)'))\n    + Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Принятый_инвойс_'&'$(vCurrency)'))\n    + Sum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='ДНО_'&'$(vCurrency)'))\n    + Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='ДНО_'&'$(vCurrency)'))\n    + Sum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Возврат_'&'$(vCurrency)'))\n    + Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Возврат_'&'$(vCurrency)'))\n    + Sum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Оплата_'&'$(vCurrency)'))\n    + Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Оплата_'&'$(vCurrency)'))\n    + if(vRevaluation = 'Переоценка', Sum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Переоценка_'&'$(vCurrency)'))\n    + Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Переоценка_'&'$(vCurrency)')), 0)\n\n\t,\n    Above(\n        + Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='Принятый_инвойс_'&'$(vCurrency)'))\n        + Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='Оплата_'&'$(vCurrency)'))\n        + Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='Возврат_'&'$(vCurrency)'))\n        + Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='ДНО_'&'$(vCurrency)'))\n        + if(vRevaluation = 'Переоценка', Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='Переоценка_'&'$(vCurrency)')), 0)\n\n        + Sum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Принятый_инвойс_'&'$(vCurrency)'))\n        + Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Принятый_инвойс_'&'$(vCurrency)'))\n        + Sum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='ДНО_'&'$(vCurrency)'))\n        + Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='ДНО_'&'$(vCurrency)'))\n        + Sum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Возврат_'&'$(vCurrency)'))\n        + Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Возврат_'&'$(vCurrency)'))\n        + Sum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Оплата_'&'$(vCurrency)'))\n        + Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Оплата_'&'$(vCurrency)'))\n        + if(vRevaluation = 'Переоценка', Sum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Переоценка_'&'$(vCurrency)'))\n        + Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Переоценка_'&'$(vCurrency)')), 0)\n        , -1)\n)",
+                "qNumFormat": {
+                  "qType": "F",
+                  "qnDec": 2,
+                  "qUseThou": 0,
+                  "qFmt": "# ##0,00",
+                  "qDec": ",",
+                  "qThou": " "
+                },
+                "qAggrFunc": "Expr",
+                "qAccumulate": 0,
+                "qActiveExpression": 0,
+                "qExpressions": [],
+                "autoSort": true,
+                "cId": "XBGxXN",
+                "numFormatFromTemplate": true,
+                "textAlign": {
+                  "auto": true,
+                  "align": "left"
+                },
+                "representation": {
+                  "type": "text",
+                  "indicator": {
+                    "showTextValues": true,
+                    "applySegmentColors": false,
+                    "position": "right"
+                  },
+                  "miniChart": {
+                    "type": "sparkline",
+                    "colors": {
+                      "main": {
+                        "index": 6
+                      },
+                      "max": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "min": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "first": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "last": {
+                        "index": 0,
+                        "color": "none"
+                      },
+                      "positive": {
+                        "index": 6
+                      },
+                      "negative": {
+                        "index": 10,
+                        "color": "#f93f17"
+                      }
+                    },
+                    "showDots": true,
+                    "yAxis": {
+                      "scale": "local",
+                      "position": "auto"
+                    }
+                  },
+                  "imageSetting": "label",
+                  "imageLabel": "",
+                  "imageUrl": "",
+                  "imageSize": "fitHeight",
+                  "imagePosition": "topCenter"
+                },
+                "conditionalColoring": {
+                  "segments": {
+                    "limits": [],
+                    "paletteColors": [
+                      {
+                        "index": 6,
+                        "icon": "dot"
+                      }
+                    ]
+                  }
+                },
+                "isCustomFormatted": false
+              },
+              "qSortBy": {
+                "qSortByNumeric": -1,
+                "qSortByLoadOrder": 1,
+                "qExpression": {}
+              },
+              "qAttributeExpressions": [
+                {
+                  "qExpression": "'red'",
+                  "qAttribute": true,
+                  "id": "cellBackgroundColor"
+                }
+              ],
+              "qAttributeDimensions": [],
+              "qCalcCond": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qTrendLines": [],
+              "qMiniChartDef": {
+                "qSortBy": {
+                  "qExpression": {}
+                },
+                "qOtherTotalSpec": {
+                  "qOtherMode": "OTHER_OFF",
+                  "qOtherCounted": {},
+                  "qOtherLimit": {},
+                  "qOtherLimitMode": "OTHER_GT_LIMIT",
+                  "qSuppressOther": true,
+                  "qForceBadValueKeeping": true,
+                  "qApplyEvenWhenPossiblyWrongResult": true,
+                  "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                  "qTotalMode": "TOTAL_OFF",
+                  "qReferencedExpression": {}
+                },
+                "qMaxNumberPoints": -1,
+                "qAttributeExpressions": [],
+                "qNullSuppression": true
+              }
+            }
+          ],
+          "qInterColumnSortOrder": [
+            0,
+            1,
+            3,
+            2,
+            4,
+            5,
+            6
+          ],
+          "qSuppressMissing": true,
+          "qInitialDataFetch": [],
+          "qReductionMode": "N",
+          "qMode": "S",
+          "qPseudoDimPos": -1,
+          "qNoOfLeftDims": -1,
+          "qMaxStackedCells": 5000,
+          "qCalcCond": {},
+          "qTitle": {},
+          "qCalcCondition": {
+            "qCond": {},
+            "qMsg": {}
+          },
+          "qColumnOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "qExpansionState": [],
+          "qDynamicScript": [],
+          "columnOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "columnWidths": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "qLayoutExclude": {
+            "qHyperCubeDef": {
+              "qDimensions": [],
+              "qMeasures": [],
+              "qInterColumnSortOrder": [],
+              "qInitialDataFetch": [],
+              "qReductionMode": "N",
+              "qMode": "S",
+              "qPseudoDimPos": -1,
+              "qNoOfLeftDims": -1,
+              "qMaxStackedCells": 5000,
+              "qCalcCond": {},
+              "qTitle": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qColumnOrder": [],
+              "qExpansionState": [],
+              "qDynamicScript": []
+            }
+          }
+        },
+        "script": "",
+        "search": {
+          "sorting": "auto"
+        },
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": true,
+        "showDetails": false,
+        "showDetailsExpression": false,
+        "components": [],
+        "totals": {
+          "show": true,
+          "position": "noTotals",
+          "label": "Итоги"
+        },
+        "scrolling": {
+          "horizontal": true,
+          "keepFirstColumnInView": false,
+          "keepFirstColumnInViewTouch": false
+        },
+        "multiline": {
+          "wrapTextInHeaders": true,
+          "wrapTextInCells": true
+        },
+        "visualization": "table"
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "685c5280-ddca-4a7c-bcaf-5d734d943f3a",
+          "qType": "filterpane"
+        },
+        "qMetaDef": {},
+        "qChildListDef": {
+          "qData": {
+            "info": "/qInfo"
+          }
+        },
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": true,
+        "showDetails": false,
+        "showDetailsExpression": false,
+        "visualization": "filterpane"
+      },
+      "qChildren": [
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "08316339-4477-45d7-89bc-294b1c90bac7",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "МВП"
+                ],
+                "qFieldLabels": [
+                  "МВП"
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByFrequency": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": false,
+                "cId": "mWTHkJ"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": "МВП",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": false,
+            "showDetailsExpression": false,
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        }
+      ]
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "a24f5ec1-d134-4d3f-9ea4-cba0f5a361bb",
+          "qType": "filterpane"
+        },
+        "qMetaDef": {},
+        "qChildListDef": {
+          "qData": {
+            "info": "/qInfo"
+          }
+        },
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": true,
+        "showDetails": false,
+        "showDetailsExpression": false,
+        "visualization": "filterpane"
+      },
+      "qChildren": [
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "c674bfa1-9cc6-4c0e-8650-e719a3fb542d",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "Месяц"
+                ],
+                "qFieldLabels": [
+                  "Месяц"
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "LUfmw"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": "Месяц",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": false,
+            "showDetailsExpression": false,
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        }
+      ]
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "3d564c22-b011-47dc-b9c8-f03664f206ae",
+          "qType": "container"
+        },
+        "qMetaDef": {},
+        "children": [
+          {
+            "refId": "JcQKe",
+            "label": "Продажи",
+            "isMaster": false,
+            "cId": "PvGjWfL"
+          },
+          {
+            "refId": "Tjkgs",
+            "label": "Оплата",
+            "isMaster": false,
+            "cId": "XLDUu"
+          },
+          {
+            "refId": "kZWZXX",
+            "label": "Возврат",
+            "isMaster": false,
+            "cId": "QHVrrjL"
+          },
+          {
+            "refId": "dmPPbJ",
+            "label": "Задолженность",
+            "isMaster": false,
+            "cId": "JDPgY",
+            "condition": {
+              "qStringExpression": {
+                "qExpr": "=0"
+              }
+            }
+          }
+        ],
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": false,
+        "showDetailsExpression": false,
+        "borders": "auto",
+        "showTabs": true,
+        "useDropdown": true,
+        "useScrollButton": true,
+        "showIcons": false,
+        "activeTab": "",
+        "defaultTab": "",
+        "visualization": "container",
+        "qChildListDef": {
+          "qData": {
+            "visualization": "/visualization",
+            "containerChildId": "/containerChildId",
+            "qExtendsId": "/qExtendsId",
+            "title": "/title",
+            "showCondition": "/showCondition"
+          }
+        },
+        "supportRefresh": false,
+        "hasExternalChildren": false
+      },
+      "qChildren": [
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "3f8be324-9843-4ef4-88e3-eaca8426a4e6",
+              "qType": "linechart"
+            },
+            "qMetaDef": {},
+            "qHyperCubeDef": {
+              "qDimensions": [
+                {
+                  "qDef": {
+                    "qGrouping": "N",
+                    "qFieldDefs": [
+                      "Месяц"
+                    ],
+                    "qFieldLabels": [
+                      ""
+                    ],
+                    "qSortCriterias": [
+                      {
+                        "qSortByNumeric": 1,
+                        "qSortByAscii": 1,
+                        "qSortByLoadOrder": 1,
+                        "qExpression": {}
+                      }
+                    ],
+                    "qNumberPresentations": [],
+                    "qActiveField": 0,
+                    "autoSort": true,
+                    "cId": "nrEEB",
+                    "othersLabel": "Другие"
+                  },
+                  "qOtherTotalSpec": {
+                    "qOtherMode": "OTHER_OFF",
+                    "qOtherCounted": {
+                      "qv": "10"
+                    },
+                    "qOtherLimit": {
+                      "qv": "0"
+                    },
+                    "qOtherLimitMode": "OTHER_GE_LIMIT",
+                    "qForceBadValueKeeping": true,
+                    "qApplyEvenWhenPossiblyWrongResult": true,
+                    "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                    "qTotalMode": "TOTAL_OFF",
+                    "qReferencedExpression": {}
+                  },
+                  "qOtherLabel": {
+                    "qv": "Другие"
+                  },
+                  "qTotalLabel": {},
+                  "qCalcCond": {},
+                  "qAttributeExpressions": [],
+                  "qAttributeDimensions": [],
+                  "qCalcCondition": {
+                    "qCond": {},
+                    "qMsg": {}
+                  }
+                }
+              ],
+              "qMeasures": [
+                {
+                  "qDef": {
+                    "qTags": [],
+                    "qGrouping": "N",
+                    "qDef": "{$<[Канал продажи]={10}>}\r\n{<[Год] = {$(=Year(AddMonths(Today(), -12)))}, [Год-Месяц]>}\nSum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Принятый_инвойс_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Принятый_инвойс_'&'$(vCurrency)'))",
+                    "qNumFormat": {
+                      "qType": "F",
+                      "qnDec": 2,
+                      "qUseThou": 0,
+                      "qFmt": "# ##0",
+                      "qDec": ",",
+                      "qThou": " "
+                    },
+                    "qAccumulate": 0,
+                    "qActiveExpression": 0,
+                    "qExpressions": [],
+                    "qLabelExpression": "=$(=Year(AddMonths(Today(), -12)))",
+                    "autoSort": true,
+                    "cId": "PApnmJB",
+                    "numFormatFromTemplate": true,
+                    "isCustomFormatted": false
+                  },
+                  "qSortBy": {
+                    "qSortByNumeric": -1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  },
+                  "qAttributeExpressions": [],
+                  "qAttributeDimensions": [],
+                  "qCalcCond": {},
+                  "qCalcCondition": {
+                    "qCond": {},
+                    "qMsg": {}
+                  },
+                  "qTrendLines": [],
+                  "qMiniChartDef": {
+                    "qSortBy": {
+                      "qExpression": {}
+                    },
+                    "qOtherTotalSpec": {
+                      "qOtherMode": "OTHER_OFF",
+                      "qOtherCounted": {},
+                      "qOtherLimit": {},
+                      "qOtherLimitMode": "OTHER_GT_LIMIT",
+                      "qForceBadValueKeeping": true,
+                      "qApplyEvenWhenPossiblyWrongResult": true,
+                      "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                      "qTotalMode": "TOTAL_OFF",
+                      "qReferencedExpression": {}
+                    },
+                    "qMaxNumberPoints": -1,
+                    "qAttributeExpressions": []
+                  }
+                },
+                {
+                  "qDef": {
+                    "qTags": [],
+                    "qGrouping": "N",
+                    "qDef": "{$<[Канал продажи]={10}>}\r\n{<[Год] = {$(=Year(Today()))}, [Год-Месяц]>}\nSum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Принятый_инвойс_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Принятый_инвойс_'&'$(vCurrency)'))",
+                    "qNumFormat": {
+                      "qType": "F",
+                      "qnDec": 2,
+                      "qUseThou": 0,
+                      "qFmt": "# ##0",
+                      "qDec": ",",
+                      "qThou": " "
+                    },
+                    "qAccumulate": 0,
+                    "qActiveExpression": 0,
+                    "qExpressions": [],
+                    "qLabelExpression": "=$(=Year(Today()))",
+                    "autoSort": true,
+                    "numFormatFromTemplate": true,
+                    "isCustomFormatted": false,
+                    "cId": "APQun",
+                    "modifiers": [
+                      {
+                        "type": "accumulation",
+                        "disabled": true,
+                        "accumulationDimension": 0,
+                        "crossAllDimensions": false,
+                        "showExcludedValues": true,
+                        "fullAccumulation": false,
+                        "steps": 6,
+                        "outputExpression": "RangeSum(Above(If(Count([$(=Replace(GetObjectField(0),']',']]'))]) > 0,  (　-Sum({<[Год] = {$(=Year(Today()))}>}$(='Принятый_инвойс_'&'$(vPriceType)'))　)  + Sum({1<[$(=Replace(GetObjectField(0),']',']]'))]={\">=$(=Min([$(=Replace(GetObjectField(0),']',']]'))]))<=$(=Max([$(=Replace(GetObjectField(0),']',']]'))]))\"}>}0), 0), 0, 6))"
+                      },
+                      {
+                        "type": "movingAverage",
+                        "disabled": true,
+                        "primaryDimension": 0,
+                        "crossAllDimensions": false,
+                        "showExcludedValues": true,
+                        "fullRange": false,
+                        "steps": 6,
+                        "outputExpression": "RangeSum(Above(If(Count([$(=Replace(GetObjectField(0),']',']]'))]) > 0,  (　-Sum({<[Год] = {$(=Year(Today()))}>}$(='Принятый_инвойс_'&'$(vPriceType)'))　)  + Sum({1<[$(=Replace(GetObjectField(0),']',']]'))]={\">=$(=Min([$(=Replace(GetObjectField(0),']',']]'))]))<=$(=Max([$(=Replace(GetObjectField(0),']',']]'))]))\"}>}0), 0), 0, 6)) / RangeMin(6, RowNo())",
+                        "nullSuppression": false
+                      },
+                      {
+                        "type": "difference",
+                        "disabled": true,
+                        "primaryDimension": 0,
+                        "crossAllDimensions": false,
+                        "showExcludedValues": true,
+                        "outputExpression": "If(Count([$(=Replace(GetObjectField(0),']',']]'))]) > 0,  (　-Sum({<[Год] = {$(=Year(Today()))}>}$(='Принятый_инвойс_'&'$(vPriceType)'))　)  + Sum({1<[$(=Replace(GetObjectField(0),']',']]'))]={\">=$(=Min([$(=Replace(GetObjectField(0),']',']]'))]))<=$(=Max([$(=Replace(GetObjectField(0),']',']]'))]))\"}>}0), 0) - Above(If(Count([$(=Replace(GetObjectField(0),']',']]'))]) > 0,  (　-Sum({<[Год] = {$(=Year(Today()))}>}$(='Принятый_инвойс_'&'$(vPriceType)'))　)  + Sum({1<[$(=Replace(GetObjectField(0),']',']]'))]={\">=$(=Min([$(=Replace(GetObjectField(0),']',']]'))]))<=$(=Max([$(=Replace(GetObjectField(0),']',']]'))]))\"}>}0), 0))"
+                      }
+                    ]
+                  },
+                  "qSortBy": {
+                    "qSortByNumeric": -1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  },
+                  "qAttributeExpressions": [],
+                  "qAttributeDimensions": [],
+                  "qCalcCond": {},
+                  "qCalcCondition": {
+                    "qCond": {},
+                    "qMsg": {}
+                  },
+                  "qTrendLines": [],
+                  "qMiniChartDef": {
+                    "qSortBy": {
+                      "qExpression": {}
+                    },
+                    "qOtherTotalSpec": {
+                      "qOtherMode": "OTHER_OFF",
+                      "qOtherCounted": {},
+                      "qOtherLimit": {},
+                      "qOtherLimitMode": "OTHER_GT_LIMIT",
+                      "qForceBadValueKeeping": true,
+                      "qApplyEvenWhenPossiblyWrongResult": true,
+                      "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                      "qTotalMode": "TOTAL_OFF",
+                      "qReferencedExpression": {}
+                    },
+                    "qMaxNumberPoints": -1,
+                    "qAttributeExpressions": []
+                  }
+                }
+              ],
+              "qInterColumnSortOrder": [
+                0,
+                1,
+                2
+              ],
+              "qSuppressMissing": true,
+              "qInitialDataFetch": [
+                {
+                  "qLeft": 0,
+                  "qTop": 0,
+                  "qWidth": 17,
+                  "qHeight": 500
+                }
+              ],
+              "qReductionMode": "N",
+              "qMode": "S",
+              "qPseudoDimPos": -1,
+              "qNoOfLeftDims": -1,
+              "qAlwaysFullyExpanded": true,
+              "qMaxStackedCells": 5000,
+              "qCalcCond": {},
+              "qTitle": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qColumnOrder": [],
+              "qExpansionState": [],
+              "qDynamicScript": [],
+              "qLayoutExclude": {
+                "qHyperCubeDef": {
+                  "qDimensions": [],
+                  "qMeasures": [],
+                  "qInterColumnSortOrder": [],
+                  "qInitialDataFetch": [],
+                  "qReductionMode": "N",
+                  "qMode": "S",
+                  "qPseudoDimPos": -1,
+                  "qNoOfLeftDims": -1,
+                  "qMaxStackedCells": 5000,
+                  "qCalcCond": {},
+                  "qTitle": {},
+                  "qCalcCondition": {
+                    "qCond": {},
+                    "qMsg": {}
+                  },
+                  "qColumnOrder": [],
+                  "qExpansionState": [],
+                  "qDynamicScript": []
+                }
+              }
+            },
+            "script": "",
+            "refLine": {
+              "refLines": [],
+              "dimRefLines": []
+            },
+            "showTitles": false,
+            "title": "Принятый инвойс",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": false,
+            "showDetailsExpression": false,
+            "showDisclaimer": false,
+            "components": [
+              {
+                "key": "line",
+                "style": {
+                  "dataPointSize": 11,
+                  "lineThickness": 1,
+                  "lineType": "solid",
+                  "lineCurve": "monotone"
+                }
+              }
+            ],
+            "lineType": "line",
+            "stackedArea": false,
+            "separateStacking": true,
+            "orientation": "horizontal",
+            "scrollbar": "miniChart",
+            "scrollStartPos": 0,
+            "nullMode": "gap",
+            "dataPoint": {
+              "show": true,
+              "showLabels": "all"
+            },
+            "gridLine": {
+              "auto": false,
+              "spacing": 0
+            },
+            "color": {
+              "auto": false,
+              "mode": "byMultiple",
+              "formatting": {
+                "numFormatFromTemplate": true
+              },
+              "useBaseColors": "off",
+              "paletteColor": {
+                "index": 6
+              },
+              "useDimColVal": true,
+              "useMeasureGradient": true,
+              "persistent": false,
+              "expressionIsColor": true,
+              "expressionLabel": "",
+              "measureScheme": "sg",
+              "reverseScheme": false,
+              "dimensionScheme": "100",
+              "autoMinMax": true,
+              "measureMin": 0,
+              "measureMax": 10,
+              "altLabel": "2021",
+              "byMeasureDef": {
+                "label": "2021",
+                "key": "Sum({<[Год] = {2021}>}$(='Оплата_'&'$(vPriceType)'))",
+                "type": "expression"
+              }
+            },
+            "legend": {
+              "show": true,
+              "dock": "auto",
+              "showTitle": false
+            },
+            "dimensionAxis": {
+              "continuousAuto": false,
+              "show": "labels",
+              "label": "auto",
+              "dock": "near",
+              "axisDisplayMode": "auto",
+              "maxVisibleItems": 10
+            },
+            "preferContinuousAxis": false,
+            "measureAxis": {
+              "show": "labels",
+              "dock": "far",
+              "spacing": 2,
+              "autoMinMax": true,
+              "minMax": "min",
+              "min": 0,
+              "max": 10,
+              "logarithmic": false
+            },
+            "tooltip": {
+              "auto": true,
+              "hideBasic": false,
+              "chart": {
+                "style": {
+                  "size": "medium"
+                }
+              },
+              "title": "",
+              "description": ""
+            },
+            "visualization": "linechart",
+            "version": "1.17.3",
+            "showMiniChartForContinuousAxis": true,
+            "qLayoutExclude": {
+              "quarantine": {}
+            },
+            "containerChildId": "JcQKe"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "0f766999-4abb-4571-ba71-75574f3a1d17",
+              "qType": "linechart"
+            },
+            "qMetaDef": {},
+            "qHyperCubeDef": {
+              "qDimensions": [
+                {
+                  "qDef": {
+                    "qGrouping": "N",
+                    "qFieldDefs": [
+                      "Месяц"
+                    ],
+                    "qFieldLabels": [
+                      ""
+                    ],
+                    "qSortCriterias": [
+                      {
+                        "qSortByNumeric": 1,
+                        "qSortByAscii": 1,
+                        "qSortByLoadOrder": 1,
+                        "qExpression": {}
+                      }
+                    ],
+                    "qNumberPresentations": [],
+                    "qActiveField": 0,
+                    "autoSort": true,
+                    "cId": "nrEEB",
+                    "othersLabel": "Другие"
+                  },
+                  "qOtherTotalSpec": {
+                    "qOtherMode": "OTHER_OFF",
+                    "qOtherCounted": {
+                      "qv": "10"
+                    },
+                    "qOtherLimit": {
+                      "qv": "0"
+                    },
+                    "qOtherLimitMode": "OTHER_GE_LIMIT",
+                    "qForceBadValueKeeping": true,
+                    "qApplyEvenWhenPossiblyWrongResult": true,
+                    "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                    "qTotalMode": "TOTAL_OFF",
+                    "qReferencedExpression": {}
+                  },
+                  "qOtherLabel": {
+                    "qv": "Другие"
+                  },
+                  "qTotalLabel": {},
+                  "qCalcCond": {},
+                  "qAttributeExpressions": [],
+                  "qAttributeDimensions": [],
+                  "qCalcCondition": {
+                    "qCond": {},
+                    "qMsg": {}
+                  }
+                }
+              ],
+              "qMeasures": [
+                {
+                  "qDef": {
+                    "qTags": [],
+                    "qGrouping": "N",
+                    "qDef": "{$<[Канал продажи]={10}>}\r\n{<[Год] = {$(=Year(AddMonths(Today(), -12)))}, [Год-Месяц]>}\nSum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Оплата_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Оплата_'&'$(vCurrency)'))",
+                    "qNumFormat": {
+                      "qType": "F",
+                      "qnDec": 2,
+                      "qUseThou": 0,
+                      "qFmt": "# ##0,00",
+                      "qDec": ",",
+                      "qThou": " "
+                    },
+                    "qAccumulate": 0,
+                    "qActiveExpression": 0,
+                    "qExpressions": [],
+                    "qLabelExpression": "=$(=Year(AddMonths(Today(), -12)))",
+                    "autoSort": true,
+                    "numFormatFromTemplate": true,
+                    "isCustomFormatted": false,
+                    "cId": "qPZrVp"
+                  },
+                  "qSortBy": {
+                    "qSortByNumeric": -1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  },
+                  "qAttributeExpressions": [],
+                  "qAttributeDimensions": [],
+                  "qCalcCond": {},
+                  "qCalcCondition": {
+                    "qCond": {},
+                    "qMsg": {}
+                  },
+                  "qTrendLines": [],
+                  "qMiniChartDef": {
+                    "qSortBy": {
+                      "qExpression": {}
+                    },
+                    "qOtherTotalSpec": {
+                      "qOtherMode": "OTHER_OFF",
+                      "qOtherCounted": {},
+                      "qOtherLimit": {},
+                      "qOtherLimitMode": "OTHER_GT_LIMIT",
+                      "qForceBadValueKeeping": true,
+                      "qApplyEvenWhenPossiblyWrongResult": true,
+                      "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                      "qTotalMode": "TOTAL_OFF",
+                      "qReferencedExpression": {}
+                    },
+                    "qMaxNumberPoints": -1,
+                    "qAttributeExpressions": []
+                  }
+                },
+                {
+                  "qDef": {
+                    "qTags": [],
+                    "qGrouping": "N",
+                    "qDef": "{$<[Канал продажи]={10}>}\r\n{<[Год] = {$(=Year(AddMonths(Today(), 0)))}, [Год-Месяц]>}\nSum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Оплата_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Оплата_'&'$(vCurrency)'))",
+                    "qNumFormat": {
+                      "qType": "F",
+                      "qnDec": 2,
+                      "qUseThou": 0,
+                      "qFmt": "# ##0,00",
+                      "qDec": ",",
+                      "qThou": " "
+                    },
+                    "qAccumulate": 0,
+                    "qActiveExpression": 0,
+                    "qExpressions": [],
+                    "qLabelExpression": "=$(=Year(AddMonths(Today(), 0)))",
+                    "autoSort": true,
+                    "numFormatFromTemplate": true,
+                    "isCustomFormatted": false,
+                    "cId": "APQun"
+                  },
+                  "qSortBy": {
+                    "qSortByNumeric": -1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  },
+                  "qAttributeExpressions": [],
+                  "qAttributeDimensions": [],
+                  "qCalcCond": {},
+                  "qCalcCondition": {
+                    "qCond": {},
+                    "qMsg": {}
+                  },
+                  "qTrendLines": [],
+                  "qMiniChartDef": {
+                    "qSortBy": {
+                      "qExpression": {}
+                    },
+                    "qOtherTotalSpec": {
+                      "qOtherMode": "OTHER_OFF",
+                      "qOtherCounted": {},
+                      "qOtherLimit": {},
+                      "qOtherLimitMode": "OTHER_GT_LIMIT",
+                      "qForceBadValueKeeping": true,
+                      "qApplyEvenWhenPossiblyWrongResult": true,
+                      "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                      "qTotalMode": "TOTAL_OFF",
+                      "qReferencedExpression": {}
+                    },
+                    "qMaxNumberPoints": -1,
+                    "qAttributeExpressions": []
+                  }
+                }
+              ],
+              "qInterColumnSortOrder": [
+                0,
+                1,
+                2
+              ],
+              "qSuppressMissing": true,
+              "qInitialDataFetch": [
+                {
+                  "qLeft": 0,
+                  "qTop": 0,
+                  "qWidth": 17,
+                  "qHeight": 500
+                }
+              ],
+              "qReductionMode": "N",
+              "qMode": "S",
+              "qPseudoDimPos": -1,
+              "qNoOfLeftDims": -1,
+              "qAlwaysFullyExpanded": true,
+              "qMaxStackedCells": 5000,
+              "qCalcCond": {},
+              "qTitle": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qColumnOrder": [],
+              "qExpansionState": [],
+              "qDynamicScript": [],
+              "qLayoutExclude": {
+                "qHyperCubeDef": {
+                  "qDimensions": [],
+                  "qMeasures": [],
+                  "qInterColumnSortOrder": [],
+                  "qInitialDataFetch": [],
+                  "qReductionMode": "N",
+                  "qMode": "S",
+                  "qPseudoDimPos": -1,
+                  "qNoOfLeftDims": -1,
+                  "qMaxStackedCells": 5000,
+                  "qCalcCond": {},
+                  "qTitle": {},
+                  "qCalcCondition": {
+                    "qCond": {},
+                    "qMsg": {}
+                  },
+                  "qColumnOrder": [],
+                  "qExpansionState": [],
+                  "qDynamicScript": []
+                }
+              }
+            },
+            "script": "",
+            "refLine": {
+              "refLines": [],
+              "dimRefLines": []
+            },
+            "showTitles": false,
+            "title": "Оплата",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": false,
+            "showDetailsExpression": false,
+            "showDisclaimer": false,
+            "components": [
+              {
+                "key": "line",
+                "style": {
+                  "dataPointSize": 12,
+                  "lineThickness": 1,
+                  "lineType": "solid",
+                  "lineCurve": "monotone"
+                }
+              }
+            ],
+            "lineType": "line",
+            "stackedArea": false,
+            "separateStacking": true,
+            "orientation": "horizontal",
+            "scrollbar": "miniChart",
+            "scrollStartPos": 0,
+            "nullMode": "gap",
+            "dataPoint": {
+              "show": true,
+              "showLabels": "auto"
+            },
+            "gridLine": {
+              "auto": false,
+              "spacing": 3
+            },
+            "color": {
+              "auto": false,
+              "mode": "byMultiple",
+              "formatting": {
+                "numFormatFromTemplate": true
+              },
+              "useBaseColors": "off",
+              "paletteColor": {
+                "index": 6
+              },
+              "useDimColVal": true,
+              "useMeasureGradient": true,
+              "persistent": false,
+              "expressionIsColor": true,
+              "expressionLabel": "",
+              "measureScheme": "sg",
+              "reverseScheme": false,
+              "dimensionScheme": "100",
+              "autoMinMax": true,
+              "measureMin": 0,
+              "measureMax": 10,
+              "altLabel": "2021",
+              "byMeasureDef": {
+                "label": "2021",
+                "key": "Sum({<[Год] = {2021}>}$(='Оплата_'&'$(vPriceType)'))",
+                "type": "expression"
+              }
+            },
+            "legend": {
+              "show": true,
+              "dock": "auto",
+              "showTitle": false
+            },
+            "dimensionAxis": {
+              "continuousAuto": false,
+              "show": "labels",
+              "label": "auto",
+              "dock": "near",
+              "axisDisplayMode": "auto",
+              "maxVisibleItems": 10
+            },
+            "preferContinuousAxis": false,
+            "measureAxis": {
+              "show": "labels",
+              "dock": "near",
+              "spacing": 1,
+              "autoMinMax": true,
+              "minMax": "min",
+              "min": 0,
+              "max": 10,
+              "logarithmic": false
+            },
+            "tooltip": {
+              "auto": true,
+              "hideBasic": false,
+              "chart": {
+                "style": {
+                  "size": "medium"
+                }
+              },
+              "title": "",
+              "description": ""
+            },
+            "visualization": "linechart",
+            "version": "1.17.3",
+            "showMiniChartForContinuousAxis": true,
+            "qLayoutExclude": {
+              "quarantine": {}
+            },
+            "containerChildId": "Tjkgs"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "95496e9c-4575-4584-9be5-5c6fad165593",
+              "qType": "linechart"
+            },
+            "qMetaDef": {},
+            "qHyperCubeDef": {
+              "qDimensions": [
+                {
+                  "qDef": {
+                    "qGrouping": "N",
+                    "qFieldDefs": [
+                      "Месяц"
+                    ],
+                    "qFieldLabels": [
+                      ""
+                    ],
+                    "qSortCriterias": [
+                      {
+                        "qSortByNumeric": 1,
+                        "qSortByAscii": 1,
+                        "qSortByLoadOrder": 1,
+                        "qExpression": {}
+                      }
+                    ],
+                    "qNumberPresentations": [],
+                    "qActiveField": 0,
+                    "autoSort": true,
+                    "cId": "nrEEB",
+                    "othersLabel": "Другие"
+                  },
+                  "qOtherTotalSpec": {
+                    "qOtherMode": "OTHER_OFF",
+                    "qOtherCounted": {
+                      "qv": "10"
+                    },
+                    "qOtherLimit": {
+                      "qv": "0"
+                    },
+                    "qOtherLimitMode": "OTHER_GE_LIMIT",
+                    "qForceBadValueKeeping": true,
+                    "qApplyEvenWhenPossiblyWrongResult": true,
+                    "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                    "qTotalMode": "TOTAL_OFF",
+                    "qReferencedExpression": {}
+                  },
+                  "qOtherLabel": {
+                    "qv": "Другие"
+                  },
+                  "qTotalLabel": {},
+                  "qCalcCond": {},
+                  "qAttributeExpressions": [],
+                  "qAttributeDimensions": [],
+                  "qCalcCondition": {
+                    "qCond": {},
+                    "qMsg": {}
+                  }
+                }
+              ],
+              "qMeasures": [
+                {
+                  "qDef": {
+                    "qTags": [],
+                    "qGrouping": "N",
+                    "qDef": "{$<[Канал продажи]={10}>}\r\n{<[Год] = {$(=Year(AddMonths(Today(), -12)))}, [Год-Месяц]>}\nSum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Возврат_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Возврат_'&'$(vCurrency)'))",
+                    "qNumFormat": {
+                      "qType": "F",
+                      "qnDec": 2,
+                      "qUseThou": 0,
+                      "qFmt": "# ##0,00",
+                      "qDec": ",",
+                      "qThou": " "
+                    },
+                    "qAccumulate": 0,
+                    "qActiveExpression": 0,
+                    "qExpressions": [],
+                    "qLabelExpression": "=$(=Year(AddMonths(Today(), -12)))",
+                    "autoSort": true,
+                    "numFormatFromTemplate": true,
+                    "isCustomFormatted": false,
+                    "cId": "qPZrVp"
+                  },
+                  "qSortBy": {
+                    "qSortByNumeric": -1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  },
+                  "qAttributeExpressions": [],
+                  "qAttributeDimensions": [],
+                  "qCalcCond": {},
+                  "qCalcCondition": {
+                    "qCond": {},
+                    "qMsg": {}
+                  },
+                  "qTrendLines": [],
+                  "qMiniChartDef": {
+                    "qSortBy": {
+                      "qExpression": {}
+                    },
+                    "qOtherTotalSpec": {
+                      "qOtherMode": "OTHER_OFF",
+                      "qOtherCounted": {},
+                      "qOtherLimit": {},
+                      "qOtherLimitMode": "OTHER_GT_LIMIT",
+                      "qForceBadValueKeeping": true,
+                      "qApplyEvenWhenPossiblyWrongResult": true,
+                      "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                      "qTotalMode": "TOTAL_OFF",
+                      "qReferencedExpression": {}
+                    },
+                    "qMaxNumberPoints": -1,
+                    "qAttributeExpressions": []
+                  }
+                },
+                {
+                  "qDef": {
+                    "qTags": [],
+                    "qGrouping": "N",
+                    "qDef": "{$<[Канал продажи]={10}>}\r\n{<[Год] = {$(=Year(AddMonths(Today(), 0)))}, [Год-Месяц]>}\nSum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Возврат_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Возврат_'&'$(vCurrency)'))",
+                    "qNumFormat": {
+                      "qType": "F",
+                      "qnDec": 2,
+                      "qUseThou": 0,
+                      "qFmt": "# ##0,00",
+                      "qDec": ",",
+                      "qThou": " "
+                    },
+                    "qAccumulate": 0,
+                    "qActiveExpression": 0,
+                    "qExpressions": [],
+                    "qLabelExpression": "=$(=Year(AddMonths(Today(), 0)))",
+                    "autoSort": true,
+                    "numFormatFromTemplate": true,
+                    "isCustomFormatted": false,
+                    "cId": "APQun"
+                  },
+                  "qSortBy": {
+                    "qSortByNumeric": -1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  },
+                  "qAttributeExpressions": [],
+                  "qAttributeDimensions": [],
+                  "qCalcCond": {},
+                  "qCalcCondition": {
+                    "qCond": {},
+                    "qMsg": {}
+                  },
+                  "qTrendLines": [],
+                  "qMiniChartDef": {
+                    "qSortBy": {
+                      "qExpression": {}
+                    },
+                    "qOtherTotalSpec": {
+                      "qOtherMode": "OTHER_OFF",
+                      "qOtherCounted": {},
+                      "qOtherLimit": {},
+                      "qOtherLimitMode": "OTHER_GT_LIMIT",
+                      "qForceBadValueKeeping": true,
+                      "qApplyEvenWhenPossiblyWrongResult": true,
+                      "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                      "qTotalMode": "TOTAL_OFF",
+                      "qReferencedExpression": {}
+                    },
+                    "qMaxNumberPoints": -1,
+                    "qAttributeExpressions": []
+                  }
+                }
+              ],
+              "qInterColumnSortOrder": [
+                0,
+                1,
+                2
+              ],
+              "qSuppressMissing": true,
+              "qInitialDataFetch": [
+                {
+                  "qLeft": 0,
+                  "qTop": 0,
+                  "qWidth": 17,
+                  "qHeight": 500
+                }
+              ],
+              "qReductionMode": "N",
+              "qMode": "S",
+              "qPseudoDimPos": -1,
+              "qNoOfLeftDims": -1,
+              "qAlwaysFullyExpanded": true,
+              "qMaxStackedCells": 5000,
+              "qCalcCond": {},
+              "qTitle": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qColumnOrder": [],
+              "qExpansionState": [],
+              "qDynamicScript": [],
+              "qLayoutExclude": {
+                "qHyperCubeDef": {
+                  "qDimensions": [],
+                  "qMeasures": [],
+                  "qInterColumnSortOrder": [],
+                  "qInitialDataFetch": [],
+                  "qReductionMode": "N",
+                  "qMode": "S",
+                  "qPseudoDimPos": -1,
+                  "qNoOfLeftDims": -1,
+                  "qMaxStackedCells": 5000,
+                  "qCalcCond": {},
+                  "qTitle": {},
+                  "qCalcCondition": {
+                    "qCond": {},
+                    "qMsg": {}
+                  },
+                  "qColumnOrder": [],
+                  "qExpansionState": [],
+                  "qDynamicScript": []
+                }
+              }
+            },
+            "script": "",
+            "refLine": {
+              "refLines": [],
+              "dimRefLines": []
+            },
+            "showTitles": false,
+            "title": "Возврат",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": false,
+            "showDetailsExpression": false,
+            "showDisclaimer": false,
+            "components": [
+              {
+                "key": "line",
+                "style": {
+                  "dataPointSize": 12,
+                  "lineThickness": 1,
+                  "lineType": "solid",
+                  "lineCurve": "monotone"
+                }
+              }
+            ],
+            "lineType": "line",
+            "stackedArea": false,
+            "separateStacking": true,
+            "orientation": "horizontal",
+            "scrollbar": "miniChart",
+            "scrollStartPos": 0,
+            "nullMode": "gap",
+            "dataPoint": {
+              "show": true,
+              "showLabels": "auto"
+            },
+            "gridLine": {
+              "auto": false,
+              "spacing": 3
+            },
+            "color": {
+              "auto": false,
+              "mode": "byMultiple",
+              "formatting": {
+                "numFormatFromTemplate": true
+              },
+              "useBaseColors": "off",
+              "paletteColor": {
+                "index": 6
+              },
+              "useDimColVal": true,
+              "useMeasureGradient": true,
+              "persistent": false,
+              "expressionIsColor": true,
+              "expressionLabel": "",
+              "measureScheme": "sg",
+              "reverseScheme": false,
+              "dimensionScheme": "100",
+              "autoMinMax": true,
+              "measureMin": 0,
+              "measureMax": 10,
+              "altLabel": "2021",
+              "byMeasureDef": {
+                "label": "2021",
+                "key": "Sum({<[Год] = {2021}>}$(='Оплата_'&'$(vPriceType)'))",
+                "type": "expression"
+              }
+            },
+            "legend": {
+              "show": true,
+              "dock": "auto",
+              "showTitle": false
+            },
+            "dimensionAxis": {
+              "continuousAuto": false,
+              "show": "labels",
+              "label": "auto",
+              "dock": "near",
+              "axisDisplayMode": "auto",
+              "maxVisibleItems": 10
+            },
+            "preferContinuousAxis": false,
+            "measureAxis": {
+              "show": "labels",
+              "dock": "near",
+              "spacing": 1,
+              "autoMinMax": true,
+              "minMax": "min",
+              "min": 0,
+              "max": 10,
+              "logarithmic": false
+            },
+            "tooltip": {
+              "auto": true,
+              "hideBasic": false,
+              "chart": {
+                "style": {
+                  "size": "medium"
+                }
+              },
+              "title": "",
+              "description": ""
+            },
+            "visualization": "linechart",
+            "version": "1.17.3",
+            "showMiniChartForContinuousAxis": true,
+            "qLayoutExclude": {
+              "quarantine": {}
+            },
+            "containerChildId": "kZWZXX"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "99c86e18-96ed-47fe-8d2a-a8c4e1fcf7d2",
+              "qType": "linechart"
+            },
+            "qMetaDef": {},
+            "qHyperCubeDef": {
+              "qDimensions": [
+                {
+                  "qDef": {
+                    "qGrouping": "N",
+                    "qFieldDefs": [
+                      "Месяц"
+                    ],
+                    "qFieldLabels": [
+                      ""
+                    ],
+                    "qSortCriterias": [
+                      {
+                        "qSortByNumeric": 1,
+                        "qSortByAscii": 1,
+                        "qSortByLoadOrder": 1,
+                        "qExpression": {}
+                      }
+                    ],
+                    "qNumberPresentations": [],
+                    "qActiveField": 0,
+                    "autoSort": true,
+                    "cId": "nrEEB",
+                    "othersLabel": "Другие"
+                  },
+                  "qOtherTotalSpec": {
+                    "qOtherMode": "OTHER_OFF",
+                    "qOtherCounted": {
+                      "qv": "10"
+                    },
+                    "qOtherLimit": {
+                      "qv": "0"
+                    },
+                    "qOtherLimitMode": "OTHER_GE_LIMIT",
+                    "qForceBadValueKeeping": true,
+                    "qApplyEvenWhenPossiblyWrongResult": true,
+                    "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                    "qTotalMode": "TOTAL_OFF",
+                    "qReferencedExpression": {}
+                  },
+                  "qOtherLabel": {
+                    "qv": "Другие"
+                  },
+                  "qTotalLabel": {},
+                  "qCalcCond": {},
+                  "qAttributeExpressions": [],
+                  "qAttributeDimensions": [],
+                  "qCalcCondition": {
+                    "qCond": {},
+                    "qMsg": {}
+                  }
+                }
+              ],
+              "qMeasures": [
+                {
+                  "qDef": {
+                    "qTags": [],
+                    "qGrouping": "N",
+                    "qDef": "{$<[Канал продажи]={10}>}\r\n// rangesum(\n    - Sum({<[Год]={$(=Year(AddMonths(Today(), -12)))}, [Год-Месяц]>}$(='Принятый_инвойс_'&'$(vPriceType)'))\n    - Sum({<[Год]={$(=Year(AddMonths(Today(), -12)))}, [Год-Месяц]>}$(='ДНО_'&'$(vPriceType)'))\n/*    + Sum({<[Год]={$(=Year(AddMonths(Today(), -12)))}, [Год-Месяц], [Месяц-Год-Num]={\"<=$(=Min([Месяц-Год-Num]))\"}>}$(='Оплата_'&'$(vPriceType)'))\n    + Sum({<[Год]={$(=Year(AddMonths(Today(), -12)))}, [Год-Месяц], [Месяц-Год-Num]={\"<=$(=Min([Месяц-Год-Num]))\"}>}$(='Возврат_сумма_'&'$(vPriceType)'))\n    - Sum({<[Год]={\"<$(=Year(AddMonths(Today(), -12)))\"}>}$(='Принятый_инвойс_'&'$(vPriceType)'))\n    - Sum({<[Год]={\"<$(=Year(AddMonths(Today(), -12)))\"}>}$(='ДНО_'&'$(vPriceType)'))\n    + Sum({<[Год]={\"<$(=Year(AddMonths(Today(), -12)))\"}>}$(='Оплата_'&'$(vPriceType)'))\n    + Sum({<[Год]={\"<$(=Year(AddMonths(Today(), -12)))\"}>}$(='Возврат_сумма_'&'$(vPriceType)'))\n\n\t,\n    Above(\n        - Sum({<[Год]={$(=Year(AddMonths(Today(), -12)))}, [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}>}$(='Принятый_инвойс_'&'$(vPriceType)'))\n        - Sum({<[Год]={$(=Year(AddMonths(Today(), -12)))}, [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}>}$(='ДНО_'&'$(vPriceType)'))\n        + Sum({<[Год]={$(=Year(AddMonths(Today(), -12)))}, [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}>}$(='Оплата_'&'$(vPriceType)'))\n        + Sum({<[Год]={$(=Year(AddMonths(Today(), -12)))}, [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}>}$(='Возврат_сумма_'&'$(vPriceType)'))\n        - Sum({<[Год]={\"<$(=Year(AddMonths(Today(), -12)))\"}>}$(='Принятый_инвойс_'&'$(vPriceType)'))\n        - Sum({<[Год]={\"<$(=Year(AddMonths(Today(), -12)))\"}>}$(='ДНО_'&'$(vPriceType)'))\n        + Sum({<[Год]={\"<$(=Year(AddMonths(Today(), -12)))\"}>}$(='Оплата_'&'$(vPriceType)'))\n        + Sum({<[Год]={\"<$(=Year(AddMonths(Today(), -12)))\"}>}$(='Возврат_сумма_'&'$(vPriceType)'))\n        , -1)\n)\n*/\n",
+                    "qNumFormat": {
+                      "qType": "F",
+                      "qnDec": 2,
+                      "qUseThou": 0,
+                      "qFmt": "# ##0",
+                      "qDec": ",",
+                      "qThou": " "
+                    },
+                    "qAccumulate": 0,
+                    "qActiveExpression": 0,
+                    "qExpressions": [],
+                    "qLabelExpression": "=$(=Year(AddMonths(Today(), -12)))",
+                    "autoSort": true,
+                    "cId": "PApnmJB",
+                    "numFormatFromTemplate": true,
+                    "isCustomFormatted": false
+                  },
+                  "qSortBy": {
+                    "qSortByNumeric": -1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  },
+                  "qAttributeExpressions": [],
+                  "qAttributeDimensions": [],
+                  "qCalcCond": {},
+                  "qCalcCondition": {
+                    "qCond": {},
+                    "qMsg": {}
+                  },
+                  "qTrendLines": [],
+                  "qMiniChartDef": {
+                    "qSortBy": {
+                      "qExpression": {}
+                    },
+                    "qOtherTotalSpec": {
+                      "qOtherMode": "OTHER_OFF",
+                      "qOtherCounted": {},
+                      "qOtherLimit": {},
+                      "qOtherLimitMode": "OTHER_GT_LIMIT",
+                      "qForceBadValueKeeping": true,
+                      "qApplyEvenWhenPossiblyWrongResult": true,
+                      "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                      "qTotalMode": "TOTAL_OFF",
+                      "qReferencedExpression": {}
+                    },
+                    "qMaxNumberPoints": -1,
+                    "qAttributeExpressions": []
+                  }
+                },
+                {
+                  "qDef": {
+                    "qTags": [],
+                    "qGrouping": "N",
+                    "qDef": "{$<[Канал продажи]={10}>}\r\nAbove(\n- Sum({<[Год]={$(=Year(AddMonths(Today(), -12)))}, [Год-Месяц], [Месяц]>}$(='Принятый_инвойс_'&'$(vPriceType)'))\n- Sum({<[Год]={$(=Year(AddMonths(Today(), -12)))}, [Год-Месяц], [Месяц]>}$(='ДНО_'&'$(vPriceType)'))\n, 1)",
+                    "qNumFormat": {
+                      "qType": "U",
+                      "qnDec": 10,
+                      "qUseThou": 0
+                    },
+                    "qAccumulate": 0,
+                    "qActiveExpression": 0,
+                    "qExpressions": [],
+                    "autoSort": true,
+                    "cId": "LePcYAy",
+                    "numFormatFromTemplate": true
+                  },
+                  "qSortBy": {
+                    "qSortByNumeric": -1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  },
+                  "qAttributeExpressions": [],
+                  "qAttributeDimensions": [],
+                  "qCalcCond": {},
+                  "qCalcCondition": {
+                    "qCond": {},
+                    "qMsg": {}
+                  },
+                  "qTrendLines": [],
+                  "qMiniChartDef": {
+                    "qSortBy": {
+                      "qExpression": {}
+                    },
+                    "qOtherTotalSpec": {
+                      "qOtherMode": "OTHER_OFF",
+                      "qOtherCounted": {},
+                      "qOtherLimit": {},
+                      "qOtherLimitMode": "OTHER_GT_LIMIT",
+                      "qForceBadValueKeeping": true,
+                      "qApplyEvenWhenPossiblyWrongResult": true,
+                      "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                      "qTotalMode": "TOTAL_OFF",
+                      "qReferencedExpression": {}
+                    },
+                    "qMaxNumberPoints": -1,
+                    "qAttributeExpressions": []
+                  }
+                }
+              ],
+              "qInterColumnSortOrder": [
+                0,
+                1,
+                2
+              ],
+              "qSuppressMissing": true,
+              "qInitialDataFetch": [
+                {
+                  "qLeft": 0,
+                  "qTop": 0,
+                  "qWidth": 17,
+                  "qHeight": 500
+                }
+              ],
+              "qReductionMode": "N",
+              "qMode": "S",
+              "qPseudoDimPos": -1,
+              "qNoOfLeftDims": -1,
+              "qAlwaysFullyExpanded": true,
+              "qMaxStackedCells": 5000,
+              "qCalcCond": {},
+              "qTitle": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qColumnOrder": [],
+              "qExpansionState": [],
+              "qDynamicScript": [],
+              "qLayoutExclude": {
+                "qHyperCubeDef": {
+                  "qDimensions": [],
+                  "qMeasures": [],
+                  "qInterColumnSortOrder": [],
+                  "qInitialDataFetch": [],
+                  "qReductionMode": "N",
+                  "qMode": "S",
+                  "qPseudoDimPos": -1,
+                  "qNoOfLeftDims": -1,
+                  "qMaxStackedCells": 5000,
+                  "qCalcCond": {},
+                  "qTitle": {},
+                  "qCalcCondition": {
+                    "qCond": {},
+                    "qMsg": {}
+                  },
+                  "qColumnOrder": [],
+                  "qExpansionState": [],
+                  "qDynamicScript": []
+                }
+              }
+            },
+            "script": "",
+            "refLine": {
+              "refLines": [],
+              "dimRefLines": []
+            },
+            "showTitles": false,
+            "title": "Принятый инвойс",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": false,
+            "showDetailsExpression": false,
+            "showDisclaimer": false,
+            "components": [
+              {
+                "key": "line",
+                "style": {
+                  "dataPointSize": 11,
+                  "lineThickness": 1,
+                  "lineType": "solid",
+                  "lineCurve": "monotone"
+                }
+              }
+            ],
+            "lineType": "line",
+            "stackedArea": false,
+            "separateStacking": true,
+            "orientation": "horizontal",
+            "scrollbar": "miniChart",
+            "scrollStartPos": 0,
+            "nullMode": "gap",
+            "dataPoint": {
+              "show": true,
+              "showLabels": "all"
+            },
+            "gridLine": {
+              "auto": false,
+              "spacing": 0
+            },
+            "color": {
+              "auto": false,
+              "mode": "byMultiple",
+              "formatting": {
+                "numFormatFromTemplate": true
+              },
+              "useBaseColors": "off",
+              "paletteColor": {
+                "index": 6
+              },
+              "useDimColVal": true,
+              "useMeasureGradient": true,
+              "persistent": false,
+              "expressionIsColor": true,
+              "expressionLabel": "",
+              "measureScheme": "sg",
+              "reverseScheme": false,
+              "dimensionScheme": "100",
+              "autoMinMax": true,
+              "measureMin": 0,
+              "measureMax": 10,
+              "altLabel": "2021",
+              "byMeasureDef": {
+                "label": "2021",
+                "key": "Sum({<[Год] = {2021}>}$(='Оплата_'&'$(vPriceType)'))",
+                "type": "expression"
+              }
+            },
+            "legend": {
+              "show": true,
+              "dock": "auto",
+              "showTitle": false
+            },
+            "dimensionAxis": {
+              "continuousAuto": false,
+              "show": "labels",
+              "label": "auto",
+              "dock": "near",
+              "axisDisplayMode": "auto",
+              "maxVisibleItems": 10
+            },
+            "preferContinuousAxis": false,
+            "measureAxis": {
+              "show": "labels",
+              "dock": "far",
+              "spacing": 2,
+              "autoMinMax": true,
+              "minMax": "min",
+              "min": 0,
+              "max": 10,
+              "logarithmic": false
+            },
+            "tooltip": {
+              "auto": true,
+              "hideBasic": false,
+              "chart": {
+                "style": {
+                  "size": "medium"
+                }
+              },
+              "title": "",
+              "description": ""
+            },
+            "visualization": "linechart",
+            "version": "1.17.3",
+            "showMiniChartForContinuousAxis": true,
+            "qLayoutExclude": {
+              "quarantine": {}
+            },
+            "containerChildId": "dmPPbJ"
+          },
+          "qChildren": []
+        }
+      ]
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "61e39821-3aa5-4568-a673-a3ee36a90996",
+          "qType": "SimpleFieldSelect"
+        },
+        "qMetaDef": {},
+        "qListObjectDef": {
+          "qDef": {
+            "qGrouping": "N",
+            "qFieldDefs": [
+              "vRevaluation"
+            ],
+            "qFieldLabels": [],
+            "qSortCriterias": [
+              {
+                "qExpression": {
+                  "qv": " "
+                }
+              }
+            ],
+            "qNumberPresentations": [],
+            "qActiveField": 0
+          },
+          "qFrequencyMode": "N",
+          "qShowAlternatives": true,
+          "qInitialDataFetch": [
+            {
+              "qLeft": 0,
+              "qTop": 0,
+              "qWidth": 1,
+              "qHeight": 10000
+            }
+          ],
+          "qExpressions": [],
+          "qSortByState": 0
+        },
+        "props": {
+          "dimensionIsVariable": true,
+          "variableIsDate": false,
+          "variableEmptyAlreadySelected": true,
+          "visualizationType": "luiswitch",
+          "disableToggleMode": false,
+          "textareaonlytext": "",
+          "textareaonlyCSS": "height:100%;",
+          "textareaonlytext2": "",
+          "visInputFieldType": "text",
+          "visInputRangeSliderValuefield": false,
+          "visInputPlaceholdertxt": "",
+          "visInputExtraAttr": "",
+          "visInputNumberMin": "",
+          "visInputNumberMax": "",
+          "visInputNumberStep": "",
+          "dropdownValueForNoSelect": "Select",
+          "selectmultiselect": false,
+          "select2allowClear": false,
+          "select2enableSerach": true,
+          "select2hoverBGcolor": "",
+          "select2hoverFontcolor": "",
+          "contentpadding": "-",
+          "leftpadding": "-",
+          "bottompadding": "-",
+          "rightpadding": "-",
+          "toppadding": "-",
+          "custompadding": "",
+          "showHeader": true,
+          "headerSize": "-",
+          "headerBpadding": "-",
+          "headerTpadding": "-",
+          "elementpadding": 0,
+          "elementmargin": 0,
+          "addLUIclasses": false,
+          "fontsizeChange": "100",
+          "fixedfontsize": false,
+          "fixedfontsizevalue": 12,
+          "responsivefontsize": false,
+          "responsivefonttype": "vw",
+          "responsivefontvalue": 1,
+          "removeFullScrnBtn": true,
+          "removeMoreBtn": true,
+          "hlistRoundedcorners": true,
+          "hlistMarginBetween": "1",
+          "hlistShowAsTable": false,
+          "displayFlexBox": false,
+          "displayFlexBoxWidth": "",
+          "elHeight": "",
+          "elWidth": "",
+          "useMaxHeight": false,
+          "textHAlign": "-",
+          "textVAlign": "-",
+          "removeYscroll": false,
+          "showXscroll": false,
+          "removeLabel": false,
+          "whitespacenowrap": false,
+          "mainobjectwidth": "",
+          "mouseenterWidthMult": "1",
+          "mouseenterHeightMult": "1",
+          "mobileContainerDefaultHeight": false,
+          "mobileCustomHeightCSS": "",
+          "mobileRemoveZoom": true,
+          "maxLimitvariable": "",
+          "dateformat": "d.m.yy",
+          "variableOptionsForValues": {
+            "qStringExpression": {
+              "qExpr": "='Переоценка'"
+            }
+          },
+          "variableOptGroupStyle": "",
+          "varRemovebrackets": false,
+          "varMultiselectAllow": false,
+          "varMultiselectSep": "|",
+          "variableNameForKey": "",
+          "variableOptionsForKeys": "",
+          "allwaysOneSelectedDefault": "",
+          "selectOnlyOne": false,
+          "selectAlsoThese": "",
+          "selectDefaultsOnlyOnce": false,
+          "clearFieldSelOnFirstLoad": false,
+          "clearFieldSelOnLeave": false,
+          "hidePassiveItems": false,
+          "hideItems": "",
+          "showOnlySelectedItems": false,
+          "showOnlySelectedItemsShowPossible": false,
+          "rightclikcmenu": true,
+          "rigthclickmenushowasicon": false,
+          "rightclikcmenu_selall": true,
+          "rightclikcmenu_clear": true,
+          "rightclikcmenu_reverse": true,
+          "rightclikcmenu_possible": true,
+          "rightclikcmenu_random": false,
+          "rightclikcmenu_defaults": true,
+          "rightclikcmenu_copy": true,
+          "hideFromSelectionsBar": false,
+          "hideFromSelectionRealField": "",
+          "enableoverlay": 0,
+          "overlaytext": "",
+          "overlaybgcolor": "#ababab",
+          "overlaytxtcss": "",
+          "overlaybgcss": "",
+          "exportenabled": false,
+          "enablesearch": false,
+          "searchExcelCopypaste": false,
+          "exportenableMultisearchWith": "",
+          "searchMethod": 0,
+          "searcHideClear": false,
+          "searchRight": false,
+          "inlinelabeltext": "",
+          "inlinelabelSetinline": false,
+          "inlinelabelcss": "",
+          "helptext": "",
+          "helptextcss": "",
+          "hovertitletext": "",
+          "transparentBackground": false,
+          "specialBackgroundColor": "",
+          "noBorders": false,
+          "ownBordercolor": "",
+          "ownBordercolor2": "",
+          "color_stateS_bg": "",
+          "color_stateO_bg": "",
+          "color_stateA_bg": "",
+          "color_stateX_bg": "",
+          "color_stateS_fo": "",
+          "color_stateO_fo": "",
+          "color_stateA_fo": "",
+          "color_stateX_fo": "",
+          "color_border": "",
+          "color_hoverBG": "",
+          "color_hoverFont": "",
+          "customFontCSS": "",
+          "customFontFamilyCSS": "",
+          "customElementAttribute": "",
+          "customElementClass": "",
+          "customStyleCSS": "",
+          "customHoverCSS": "",
+          "preElemHtml": "",
+          "postElemHtml": "",
+          "enableGlobals": false,
+          "global_bgcolor": "",
+          "global_bgcss": "",
+          "global_bgcss2": "",
+          "global_bghtml": "",
+          "global_bghtmlcss": "",
+          "global_fontcolor": "",
+          "fontfamily_global": "",
+          "hideSheetTitle": false,
+          "removeSheetTitlePadding": false,
+          "sheetTitleFontSize": -1,
+          "sheetTitleheight": -1,
+          "sheetTitleExtraText": "",
+          "sheetTitleCSS": "",
+          "hidepivotTableSelectors": false,
+          "hideFieldsFromSelectionBar": "",
+          "clearAllSelOnFirstLoad": false,
+          "clearAllSelOnLeave": false,
+          "keepaliver": 0,
+          "global_customCSS": "",
+          "global_selectBGcolor": "",
+          "global_selectFontcolor": "",
+          "global_selectBordercolor": "",
+          "globsfs_stateS_bg": "",
+          "globsfs_stateO_bg": "",
+          "globsfs_stateA_bg": "",
+          "globsfs_stateX_bg": "",
+          "globsfs_stateS_fo": "",
+          "globsfs_stateO_fo": "",
+          "globsfs_stateA_fo": "",
+          "globsfs_stateX_fo": "",
+          "globsfs_border": "",
+          "globsfs_hoverBG": "",
+          "globsfs_hoverFontcolor": "",
+          "globsfs_leftpad": "",
+          "globsfs_bottompad": "",
+          "globsfs_rightpad": "",
+          "globsfs_toppad": "",
+          "globsfs_custompad": "",
+          "gremoveMobileZoom": false,
+          "ghideMobileSearch": 0,
+          "ghideMobileHeader": 0,
+          "ghideMobileFooter": 0,
+          "hideSelectionBar": false,
+          "selBarExtraText": "",
+          "selBarExtraTextcss": "",
+          "selBarExtraTextQlikStyle": false,
+          "hideInsightsButton": false,
+          "hideSelectionsTool": false,
+          "hideSmartSearchButton": false,
+          "hideGuiToolbar": false,
+          "toolbarheight": -1,
+          "toolbarTxt": "",
+          "hideToolbarCenter": false,
+          "hideToolbarCenterStory": false,
+          "hideToolbarCenterPerm": false,
+          "global_customselector": "",
+          "global_elementbgcolor": "",
+          "global_customObjCSS": "",
+          "global_cObjHeaderCSS": "",
+          "global_cObjHeaderTxtCSS": "",
+          "global_objAxisCSS": "",
+          "global_bordercolor": "",
+          "global_bordercolor2": "",
+          "global_borderwidth": "-",
+          "removeHeaderFromTextImageObjects": false,
+          "removeHeaderFromAllObjects": false,
+          "removeHeaderIfNoText": false,
+          "headerfontcolor_global": "",
+          "headerbgcolor_global": "",
+          "headerTpadding_global": "-",
+          "headerBpadding_global": "-",
+          "leftpadding_global": "-",
+          "rightpadding_global": "-",
+          "variableName": "vRevaluation"
+        },
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": true,
+        "showDetails": false,
+        "showDetailsExpression": false,
+        "visualization": "SimpleFieldSelect",
+        "variableValue": {
+          "qStringExpression": {
+            "qExpr": "=\"vRevaluation\""
+          }
+        },
+        "maxLimitvariableValue": {},
+        "version": "2.1.5",
+        "extensionMeta": {
+          "translationKey": "",
+          "icon": "list",
+          "iconChar": "puzzle",
+          "isLibraryItem": true,
+          "visible": true,
+          "name": "SimpleFieldSelect",
+          "description": "Field and variable selector for Qlik Sense",
+          "template": "SimpleFieldSelect",
+          "iconPath": "M14.5,9 L13,9 L13,3.3 C13,3.1 12.9,3 12.7,3 L8,3 L8,1.5 C8,0.7 7.3,0 6.5,0 C5.7,0 5,0.7 5,1.5 L5,3 L0.3,3 C0.1,3 0,3.1 0,3.3 L0,9 L1.5,9 C2.3,9 3,9.7 3,10.5 C3,11.3 2.3,12 1.5,12 L0,12 L0,15.7 C0,15.9 0.1,16 0.3,16 L5,16 L5,14.5 C5,13.7 5.7,13 6.5,13 C7.3,13 8,13.7 8,14.5 L8,16 L12.7,16 C12.9,16 13,15.9 13,15.7 L13,12 L14.5,12 C15.3,12 16,11.3 16,10.5 C16,9.7 15.3,9 14.5,9 Z",
+          "isThirdParty": true,
+          "type": "visualization",
+          "version": "2.1.5",
+          "author": "Matti Punkeri / Oivalo Oy https://www.oivalo.fi",
+          "homepage": "https://www.oivalo.fi",
+          "keywords": "qlik-sense, visualization",
+          "license": "MIT",
+          "preview": "RlogoSFS.png",
+          "repository": "https://github.com/mediassarQlikBranch/SimpleFieldSelect",
+          "dependencies": {
+            "qlik-sense": ">=3.0.x"
+          },
+          "previewIconURL": "https://qlik.akfagroup.com/extensions/SimpleFieldSelect/RlogoSFS.png"
+        }
+      },
+      "qChildren": []
+    }
+  ]
+}

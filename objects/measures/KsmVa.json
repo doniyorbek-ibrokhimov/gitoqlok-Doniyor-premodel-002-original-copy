@@ -1,0 +1,29 @@
+{
+  "qInfo": {
+    "qId": "KsmVa",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Оплата",
+    "qDef": "//Sum({<[AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='Оплата_'&'$(vCurrency)')) Оплата\r\n\nSum({<[AUGDT]={\">$(=date(round(num(MonthEnd(date(min([Месяц-Год-Num])))))))\"},key={'Оплата'}>}$(='Сумма_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=date(round(num(MonthEnd(date(min([Месяц-Год-Num])))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1},key={'Оплата'}>}$(='Сумма_'&'$(vCurrency)'))",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "# ##0,00",
+      "qDec": ",",
+      "qThou": " "
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Оплата",
+    "description": "",
+    "tags": []
+  }
+}

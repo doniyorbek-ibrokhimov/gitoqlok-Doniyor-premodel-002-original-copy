@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "9e243dca-69bb-4c39-a715-2edae5c390cd",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "vNodeName",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "QLIKSENSE01",
+  "qIsScriptCreated": true
+}

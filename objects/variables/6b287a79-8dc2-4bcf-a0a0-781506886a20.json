@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "6b287a79-8dc2-4bcf-a0a0-781506886a20",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "CreateSearchIndexOnReload",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "0",
+  "qIsScriptCreated": true
+}

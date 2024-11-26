@@ -1,0 +1,29 @@
+///$tab ACDOCA
+[10_ACDOCA]:
+NOCONCATENATE LOAD
+	RBUKRS,
+    KUNNR,
+    ZUONR,
+    AWREF,
+    if(BLART='SA', 'PE', BLART) as BLART1,
+    BLART,
+    WSL,
+    HSL,
+    KSL,
+    OSL,
+    BUDAT,
+    PRCTR,
+    RWCUR,
+    KOART,
+    RACCT,
+    AWREF_REV,
+    AUGDT,
+    BELNR,
+    BSTAT,
+    GJAHR,
+    VTWEG
+FROM [lib://Data/!QVD DATA/QVD/SAP/ACDOCA.qvd](qvd)
+WHERE Exists(RLDNR)
+and Exists(KUNNR)
+and RACCT like '22*' or RACCT like '32*'
+;

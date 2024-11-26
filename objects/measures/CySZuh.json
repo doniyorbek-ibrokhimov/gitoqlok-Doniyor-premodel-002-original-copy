@@ -1,0 +1,29 @@
+{
+  "qInfo": {
+    "qId": "CySZuh",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Задолженность на конец периода местный",
+    "qDef": "{$<[Канал продажи]={10}>}\r\n[Задолженность на конец периода]\n/*\n+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{1}>}$(='Принятый_инвойс_'&'$(vCurrency)'))\n+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{1}>}$(='Оплата_'&'$(vCurrency)'))\n+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{1}>}$(='Возврат_'&'$(vCurrency)'))\n+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{1}>}$(='Корректировка_'&'$(vCurrency)'))\n+ if(vRevaluation = 'Переоценка', Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{1}>}$(='Переоценка_'&'$(vCurrency)')), 0)\n+ Sum({<[AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{1}>}$(='Принятый_инвойс_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{1}>}$(='Оплата_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{1}>}$(='Возврат_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{1}>}$(='Корректировка_'&'$(vCurrency)'))\n+ if(vRevaluation = 'Переоценка', Sum({<[AUGDT]={\">$(=MonthEnd([Месяц-Год-Num]))\"}+{1}>}$(='Переоценка_'&'$(vCurrency)')), 0)\n\n\n\n\n/*\n+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='Принятый_инвойс_'&'$(vCurrency)'))\n+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='Оплата_'&'$(vCurrency)'))\n+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='Возврат_'&'$(vCurrency)'))\n+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='Корректировка_'&'$(vCurrency)'))\n//+ Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='ДНО_'&'$(vCurrency)'))\n+ if(vRevaluation = 'Переоценка', Sum({<[Год], [Год-Месяц], [Месяц-Год-Num]={\"<$(=Min([Месяц-Год-Num]))\"}, [AUGDT]={\">=$(=Min([Месяц-Год-Num]))\"}+{1}>}$(='Переоценка_'&'$(vCurrency)')), 0)\n\n+ Sum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Принятый_инвойс_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Принятый_инвойс_'&'$(vCurrency)'))\n//+ Sum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='ДНО_'&'$(vCurrency)'))\n//+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='ДНО_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Возврат_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Возврат_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Оплата_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Оплата_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Корректировка_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Корректировка_'&'$(vCurrency)'))\n+ if(vRevaluation = 'Переоценка', Sum({<[AUGDT]={\">$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))\"}>}$(='Переоценка_'&'$(vCurrency)'))\n+ Sum({<[AUGDT]={\"<=$(=round(num(MonthEnd(date(min([Месяц-Год-Num]))))))>=$(=min([Месяц-Год-Num]))\"}+{1}, AWREF_REV = {1}>}$(='Переоценка_'&'$(vCurrency)')), 0)  \n*/",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "# ##0,00",
+      "qDec": ",",
+      "qThou": " "
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Задолженность на конец периода местный",
+    "description": "",
+    "tags": []
+  }
+}
