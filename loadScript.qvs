@@ -1,15 +1,3 @@
-///$tab Main
-$(Include=[lib://Data/Script/SA.qvs]);
-$(Include=[lib://Data/Script/Format.qvs]);
-set HidePrefix='_';
-
-
-[KURS_DIFF]:
-Mapping Load
-	Distinct RBUKRS&BELNR&GJAHR,
-    1
-From [lib://Data/!QVD DATA/QVD/SAP/ACDOCA.qvd](qvd)
-Where Match(Left(RACCT, 5), '63003','73003');
 ///$tab Variable
 Set vSortBy = 7;
 Set vCurrency = 'UZS';
@@ -25,22 +13,27 @@ Set HidePrefix = '_';
 Let vThisYear = Year(Today());
 Let vThisMonth = Month(Today());
 Let vPrevMonth = Month(AddMonths(Today(),-1));
+///$tab Main
+$(Include=[lib://Data/Script/SA.qvs]);
+$(Include=[lib://Data/Script/Format.qvs]);
+set HidePrefix='_';
+
+
+[KURS_DIFF]:
+Mapping Load
+	Distinct RBUKRS&BELNR&GJAHR,
+    1
+From [lib://Data/!QVD DATA/QVD/SAP/ACDOCA.qvd](qvd)
+Where 
+	RACCT like '63003*' or RACCT like '73003*';
 ///$tab Virt Table
 Конструктор_Измерений:
 Load
 Dual(_Конструктор,Порядок) as _Конструктор,
 Порядок as _Конструктор_Num
 ;
-Load*inline
 
-// [_Конструктор,Порядок
-// 	Группа групп,1
-// 	Группа материалов,2
-//  	Канал закупа,3
-//  	Поставщик,4
-//  	Контракт,5
-//  	Валюта,6
-// ]
+Load*inline
 [_Конструктор,Порядок
 	Страна,1
   	Канал продажи,3
@@ -59,24 +52,6 @@ Load*inline
     
 ]
 ;
-
-// Конструктор_Измерений:
-// Load
-// Dual(_Конструктор,Порядок) as _Конструктор,
-// Порядок as _Конструктор_Num
-// ;
-// Load*inline
-
-// [_Конструктор,Порядок
-//     Страна,1
-//     Покупатели,2
-//     Присвоение,3
-//     Код покупателя,4
-//    	Канал продажи,5
-//  	Группировка,6
-//     Контракт,7
-// ]
-// ;
 
 Конструктор_Измерений4:
 Load
@@ -177,13 +152,6 @@ MAPPING LOAD
     ZZ_DDS_ITEM
 FROM [lib://Data/!QVD DATA/QVD/SAP/KNB1.qvd](qvd)
 ;
-
-// MAPPING_ITEM:
-// MAPPING LOAD
-//     ZZ_DDS_ITEM,
-//     ITEM
-// FROM [lib://Data/!QVD DATA/QVD/SAP/FIRUC_CF_ITEM.qvd](qvd)
-// ;
 
 // маппинг для наименования клиента
 MAPPING_NAME:
@@ -335,22 +303,16 @@ and RACCT like '22*' or RACCT like '32*'
 ///$tab Оплата/Возврат/Переоценка
 [ReceivedInvoice]:
 CONCATENATE(FactTable) LOAD
-    ///// sum( {<key={'Оплаиа'}  >} Сумма_UZS )
 	RBUKRS as БЕ,
     KUNNR,
     ZUONR,
     AWREF, 
-   // BLART,      DG    XK
-   if (ApplyMap('KURS_DIFF', RBUKRS&BELNR&GJAHR) = 1, 'Переоценка',
-      if (Match(BLART, 'DG', 'DR', 'DS','RV', 'EX', 'RC', 'XD', 'XS', 'XF','XL','XK','PW', 'DB'), 'Принятый Инвойс',
-          if (Match(BLART, 'RF'), 'Возврат'  , //// + DG
-              if (Match(BLART, 'DZ', 'DA', 'XO'), 'Оплата',  //   +CL - ZR
-                  if (Match(BLART, 'DN', 'DD', 'VZ', 'ZD','EK', 'ND','RD', 'RW', 'RX', 'XP','DL', 'SA', 'PE', 'CL', 'DC'), 'Корректировка' // -DD XP
-    				 //  ?   оплата -CL
-	) 	)	)   )	) as key,
-    
-   
-     
+    if (ApplyMap('KURS_DIFF', RBUKRS&BELNR&GJAHR) = 1, 'Переоценка',
+    if (Match(BLART, 'DG', 'DR', 'DS','RV', 'EX', 'RC', 'XD', 'XS', 'XF','XL','XK','PW', 'DB'), 'Принятый Инвойс',
+    if (Match(BLART, 'RF'), 'Возврат'  , //// + DG
+    if (Match(BLART, 'DZ', 'DA', 'XO'), 'Оплата',  //   +CL - ZR
+    if (Match(BLART, 'DN', 'DD', 'VZ', 'ZD','EK', 'ND','RD', 'RW', 'RX', 'XP','DL', 'SA', 'PE', 'CL', 'DC'), 'Корректировка'
+    ) 	)	)   )	) as key,  
     WSL as Сумма_WAERS,
     HSL as Сумма_UZS,
     KSL as Сумма_ZUD,
@@ -365,10 +327,7 @@ CONCATENATE(FactTable) LOAD
     BELNR,
     BLART,
     VTWEG
-//FROM [lib://Data/!QVD DATA/APP_002/PreModel/30_ACDOCA.qvd](qvd)
 Resident [10_ACDOCA]
-// WHERE Match(BLART, 'DG', 'DR', 'DS','RV', 'EX', 'RC', 'XD', 'XS', 'XF','XL','XK','PW','DL','RF', 'DZ', 'DA', 'XO', 'DN', 'DD', 'VZ', 'DB', 'ZD','EK', 'ND','RD', 'RW', 'RX', 'XP', 'SA', 'PE', 'CL', 'DC' )
-//or  ( ((BLART='SA' and BSTAT='U') or BLART='PE' ) and KOART ='S')
 ;
 
 
@@ -380,6 +339,7 @@ LOAD *,
     KUNNR&МВП as KUNNR_KEY
 
 ;
+
 NOCONCATENATE 
 LOAD *,
 	ApplyMap('Data_P006', KUNNR, 'Нет данных') as Факт_продаж_ГП,
@@ -400,6 +360,7 @@ LOAD *,
 	if([Группировка местные] <> 'Прочие', [Группировка местные], if([Группировка экспорт] <> 'Прочие', [Группировка экспорт], 'Прочие')) as Группировка,
     [Дата проводки] as RDAY
 ;
+
 NOCONCATENATE 
 LOAD *,
 	"Валюта" as Валюта_WAERS,
@@ -407,13 +368,13 @@ LOAD *,
     'UZS' as Валюта_UZS,
     'ZUDMVP' as Валюта_ZUDMVP,
     ApplyMap('MAPPING_ADRNR', AWREF, 'Нет ADRNR') as ADRNR,
-//     ApplyMap('MAPPING_BP_EXPORT', Text(KUNNR), 'Прочие') as [Группировка экспорт],
     subfield(ApplyMap('MAPPING_BP_EXPORT', Text(KUNNR), 'Прочие|Прочие'), '|', 1) as [Группировка экспорт],
 	subfield(ApplyMap('MAPPING_BP_EXPORT', Text(KUNNR), 'Прочие|Прочие'), '|', 2) as KUNNR2,
     ApplyMap('MAPPING_BP_LOCAL', Text(KUNNR), 'Прочие') as [Группировка местные],
     ApplyMap('MAPPING_BP_OTHERS', Text(KUNNR), 'Прочие') as [Группировка другие]
 RESIDENT FactTable
 ;
+
 DROP TABLE FactTable;
 
 
@@ -434,12 +395,8 @@ LOAD
     Клиент,
     "Клиент SAP" as KUNNR,
     Страна,
-//     "Номер оплаты",
     Поставщик,
     Text(Завод) as Завод,
-//     Контракт,
-//     Перечисление,
-//     Наличные,
     Итого as Оплата_итого
 FROM [lib://Google_Drive - ilxombek.noilbekov@akfagroup.com (res_qlik.dev001)/14HEh9FysyDPnjl73ZZ42OLwiRTQJw3o1/Истор. данные по оплате 18-23гг.xlsx]
 (ooxml, embedded labels, table is [База 18-23 окт]);
@@ -454,8 +411,6 @@ DROP TABLE INCLUDE,INCLUDE_NOT_INCLUDE;
 LOAD
     Дебитор & "Сбытовая организация" as KUNNR_KEY,
     "Канал сбыта",
-//     Имя,
-//     Страна,
     Канал,
     "Регион клиента"
 FROM [lib://Google_Drive - ilxombek.noilbekov@akfagroup.com (res_qlik.dev001)/1w7Yx-8NWMbAPRy1FuxIlLVjL6YmeYq22/Контрагенты.xlsx]
@@ -470,10 +425,9 @@ replace(МВП,' ','') as WERKS_ACCESS,
   if(KUNNR2=KUNNR,'Экспорт', 'Местный') as [экспорт клиенты]
 Resident Data
 Where not match(МВП, '1001', '1002');
-// and not Match(BELNR, '1200000074','1200000076','1200000051','1200000050');
  
  
-Store fINAL_DATA into [lib://Data/!QVD DATA/APP_002/Model/Оплата_002.qvd] (qvd);
+Store fINAL_DATA into [lib://Data Sandbox/!QVD DATA/APP_002/Model/Оплата_002.qvd] (qvd);
 drop table Data, [10_ACDOCA];
 
 ///$tab Справочник

@@ -6,6 +6,7 @@ LOAD *,
     KUNNR&МВП as KUNNR_KEY
 
 ;
+
 NOCONCATENATE 
 LOAD *,
 	ApplyMap('Data_P006', KUNNR, 'Нет данных') as Факт_продаж_ГП,
@@ -26,6 +27,7 @@ LOAD *,
 	if([Группировка местные] <> 'Прочие', [Группировка местные], if([Группировка экспорт] <> 'Прочие', [Группировка экспорт], 'Прочие')) as Группировка,
     [Дата проводки] as RDAY
 ;
+
 NOCONCATENATE 
 LOAD *,
 	"Валюта" as Валюта_WAERS,
@@ -33,13 +35,13 @@ LOAD *,
     'UZS' as Валюта_UZS,
     'ZUDMVP' as Валюта_ZUDMVP,
     ApplyMap('MAPPING_ADRNR', AWREF, 'Нет ADRNR') as ADRNR,
-//     ApplyMap('MAPPING_BP_EXPORT', Text(KUNNR), 'Прочие') as [Группировка экспорт],
     subfield(ApplyMap('MAPPING_BP_EXPORT', Text(KUNNR), 'Прочие|Прочие'), '|', 1) as [Группировка экспорт],
 	subfield(ApplyMap('MAPPING_BP_EXPORT', Text(KUNNR), 'Прочие|Прочие'), '|', 2) as KUNNR2,
     ApplyMap('MAPPING_BP_LOCAL', Text(KUNNR), 'Прочие') as [Группировка местные],
     ApplyMap('MAPPING_BP_OTHERS', Text(KUNNR), 'Прочие') as [Группировка другие]
 RESIDENT FactTable
 ;
+
 DROP TABLE FactTable;
 
 
@@ -60,12 +62,8 @@ LOAD
     Клиент,
     "Клиент SAP" as KUNNR,
     Страна,
-//     "Номер оплаты",
     Поставщик,
     Text(Завод) as Завод,
-//     Контракт,
-//     Перечисление,
-//     Наличные,
     Итого as Оплата_итого
 FROM [lib://Google_Drive - ilxombek.noilbekov@akfagroup.com (res_qlik.dev001)/14HEh9FysyDPnjl73ZZ42OLwiRTQJw3o1/Истор. данные по оплате 18-23гг.xlsx]
 (ooxml, embedded labels, table is [База 18-23 окт]);
@@ -80,8 +78,6 @@ DROP TABLE INCLUDE,INCLUDE_NOT_INCLUDE;
 LOAD
     Дебитор & "Сбытовая организация" as KUNNR_KEY,
     "Канал сбыта",
-//     Имя,
-//     Страна,
     Канал,
     "Регион клиента"
 FROM [lib://Google_Drive - ilxombek.noilbekov@akfagroup.com (res_qlik.dev001)/1w7Yx-8NWMbAPRy1FuxIlLVjL6YmeYq22/Контрагенты.xlsx]

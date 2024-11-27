@@ -9,4 +9,5 @@ Mapping Load
 	Distinct RBUKRS&BELNR&GJAHR,
     1
 From [lib://Data/!QVD DATA/QVD/SAP/ACDOCA.qvd](qvd)
-Where Match(Left(RACCT, 5), '63003','73003');
+Where 
+	RACCT like '63003*' or RACCT like '73003*';
