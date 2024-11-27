@@ -4,7 +4,6 @@ Set vCurrency = 'UZS';
 Set vRevaluation = 'Переоценка';
 Set vConstructor = WildMatch('|'&Concat(_Конструктор_Num,'|')&'|','*|$1|*')=1;
 Set vConstructor_Measures = WildMatch('|'&Concat(_Конструктор_mea_Num,'|')&'|','*|$1|*')=1;
-// Set vConstructor_Measures = WildMatch('|'&Concat(_Конструктор_Мер_Num,'|')&'|','*|$1|*')=1;
 Set vАЕИ = 1;
 
 Set HidePrefix = '_';

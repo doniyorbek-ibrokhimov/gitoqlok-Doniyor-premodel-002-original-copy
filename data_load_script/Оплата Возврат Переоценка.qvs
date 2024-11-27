@@ -1,6 +1,6 @@
 ///$tab Оплата/Возврат/Переоценка
 [ReceivedInvoice]:
-CONCATENATE(FactTable) LOAD
+LOAD
 	RBUKRS as БЕ,
     KUNNR,
     ZUONR,

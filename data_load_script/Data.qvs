@@ -39,10 +39,10 @@ LOAD *,
 	subfield(ApplyMap('MAPPING_BP_EXPORT', Text(KUNNR), 'Прочие|Прочие'), '|', 2) as KUNNR2,
     ApplyMap('MAPPING_BP_LOCAL', Text(KUNNR), 'Прочие') as [Группировка местные],
     ApplyMap('MAPPING_BP_OTHERS', Text(KUNNR), 'Прочие') as [Группировка другие]
-RESIDENT FactTable
+RESIDENT ReceivedInvoice
 ;
 
-DROP TABLE FactTable;
+Drop Table ReceivedInvoice;
 
 
 HIST_PAYMENT_RAVSHAN:
