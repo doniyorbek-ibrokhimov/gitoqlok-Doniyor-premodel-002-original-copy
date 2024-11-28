@@ -11,4 +11,4 @@ Where not match(МВП, '1001', '1002');
  
  
 Store fINAL_DATA into [lib://Data Sandbox/!QVD DATA/APP_002/Model/Оплата_002.qvd] (qvd);
-drop table Data, [10_ACDOCA];
+drop table Data;

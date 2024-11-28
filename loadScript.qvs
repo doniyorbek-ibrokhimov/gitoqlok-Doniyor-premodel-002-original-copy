@@ -143,7 +143,6 @@ WHERE NOT Exists(KUNNR)
 ;
 
 DROP TABLE NOT_INCLUDE;
-
 ///$tab MAP
 MAPPING_ZZ_DDS_ITEM:
 MAPPING LOAD
@@ -262,8 +261,29 @@ MAPPING LOAD
   KUNRG as KUNNR,
   Факт_продаж_ГП
 FROM [lib://Data/!QVD DATA/APP_006/PreModel/Data.qvd](qvd);
-///$tab ACDOCA
-[10_ACDOCA]:
+///$tab Оплата/Возврат/Переоценка
+[ReceivedInvoice]:
+LOAD
+	AWREF,
+    KUNNR,
+    ZUONR,
+    VTWEG,
+	RBUKRS as БЕ,
+    if (ApplyMap('KURS_DIFF', RBUKRS&BELNR&GJAHR) = 1, 'Переоценка',
+    if (Match(BLART, 'DG', 'DR', 'DS','RV', 'EX', 'RC', 'XD', 'XS', 'XF','XL','XK','PW', 'DB'), 'Принятый Инвойс',
+    if (Match(BLART, 'RF'), 'Возврат'  , //// + DG
+    if (Match(BLART, 'DZ', 'DA', 'XO'), 'Оплата',  //   +CL - ZR
+    if (Match(BLART, 'DN', 'DD', 'VZ', 'ZD','EK', 'ND','RD', 'RW', 'RX', 'XP','DL', 'SA', 'PE', 'CL', 'DC'), 'Корректировка'
+    ) 	)	)   )	) as key,	
+	WSL as Сумма_WAERS,
+    HSL as Сумма_UZS,
+    KSL as Сумма_ZUD,
+    OSL as Сумма_ZUDMVP,
+	BUDAT as [Дата проводки],
+	Text(Right(PRCTR, 4)) as МВП,
+	RWCUR as Валюта
+;
+
 NOCONCATENATE LOAD
 	RBUKRS,
     KUNNR,
@@ -271,17 +291,17 @@ NOCONCATENATE LOAD
     AWREF,
     if(BLART='SA', 'PE', BLART) as BLART1,
     BLART,
-    WSL,
+	WSL,
     HSL,
     KSL,
     OSL,
     BUDAT,
     PRCTR,
-    RWCUR,
+	RWCUR,
     KOART,
     RACCT,
-    AWREF_REV,
-    AUGDT,
+	if(AWREF_REV = ' ', 1, 0) as AWREF_REV,
+	if(IsNull(num(AUGDT)), 1, num(AUGDT)) as AUGDT,
     BELNR,
     BSTAT,
     GJAHR,
@@ -291,39 +311,6 @@ WHERE Exists(RLDNR)
 and Exists(KUNNR)
 and RACCT like '22*' or RACCT like '32*'
 ;
-
-
-///$tab Оплата/Возврат/Переоценка
-[ReceivedInvoice]:
-LOAD
-	RBUKRS as БЕ,
-    KUNNR,
-    ZUONR,
-    AWREF, 
-    if (ApplyMap('KURS_DIFF', RBUKRS&BELNR&GJAHR) = 1, 'Переоценка',
-    if (Match(BLART, 'DG', 'DR', 'DS','RV', 'EX', 'RC', 'XD', 'XS', 'XF','XL','XK','PW', 'DB'), 'Принятый Инвойс',
-    if (Match(BLART, 'RF'), 'Возврат'  , //// + DG
-    if (Match(BLART, 'DZ', 'DA', 'XO'), 'Оплата',  //   +CL - ZR
-    if (Match(BLART, 'DN', 'DD', 'VZ', 'ZD','EK', 'ND','RD', 'RW', 'RX', 'XP','DL', 'SA', 'PE', 'CL', 'DC'), 'Корректировка'
-    ) 	)	)   )	) as key,  
-    WSL as Сумма_WAERS,
-    HSL as Сумма_UZS,
-    KSL as Сумма_ZUD,
-    OSL as Сумма_ZUDMVP,
-    BUDAT as [Дата проводки],
-    Text(Right(PRCTR, 4)) as МВП,
-    RWCUR as Валюта,
-    KOART, 	
-    RACCT,
-    if(AWREF_REV = ' ', 1, 0) as AWREF_REV,
-    if(IsNull(num(AUGDT)), 1, num(AUGDT)) as AUGDT,
-    BELNR,
-    BLART,
-    VTWEG
-Resident [10_ACDOCA]
-;
-
-
 ///$tab Data
 Data:
 NOCONCATENATE 
@@ -398,8 +385,6 @@ FROM [lib://Google_Drive - ilxombek.noilbekov@akfagroup.com (res_qlik.dev001)/14
 DROP TABLE INCLUDE,INCLUDE_NOT_INCLUDE;
 
 
-
-
 [Клиенты_Справочник]:
 LOAD
     Дебитор & "Сбытовая организация" as KUNNR_KEY,
@@ -421,8 +406,7 @@ Where not match(МВП, '1001', '1002');
  
  
 Store fINAL_DATA into [lib://Data Sandbox/!QVD DATA/APP_002/Model/Оплата_002.qvd] (qvd);
-drop table Data, [10_ACDOCA];
-
+drop table Data;
 ///$tab Справочник
 [АЕИ_Справочник]:
 LOAD
@@ -440,7 +424,6 @@ LOAD
     UMREN_UMREZ_4
 FROM [lib://Data/!QVD DATA/APP_006/PreModel/АЕИ_Справочник.qvd](qvd)
 ;
-
 ///$tab Calendar
 $(Include=[lib://Data/Script/Calendar.qvs]);
 

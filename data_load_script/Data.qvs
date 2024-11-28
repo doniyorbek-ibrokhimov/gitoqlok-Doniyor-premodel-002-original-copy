@@ -72,8 +72,6 @@ FROM [lib://Google_Drive - ilxombek.noilbekov@akfagroup.com (res_qlik.dev001)/14
 DROP TABLE INCLUDE,INCLUDE_NOT_INCLUDE;
 
 
-
-
 [Клиенты_Справочник]:
 LOAD
     Дебитор & "Сбытовая организация" as KUNNR_KEY,
